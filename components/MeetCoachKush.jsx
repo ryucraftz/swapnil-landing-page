@@ -1,7 +1,7 @@
 import React from "react";
 import { BadgeCheck, Globe2, Users, Timer, Target, Sparkles } from "lucide-react";
 
-import coachImg from "../src/assets/coachprofile.jpg";
+import coachImg from "../src/assets/coachprofile2.jpeg";
 
 export default function MeetCoachKush() {
   return (
@@ -13,8 +13,6 @@ export default function MeetCoachKush() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          
-
           <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
             Meet Your Coach <span className="text-sky-700">Kush Solanki</span>
           </h2>
@@ -37,7 +35,8 @@ export default function MeetCoachKush() {
                   <img
                     src={coachImg}
                     alt="Coach Kush Solanki"
-                    className="h-full w-full object-cover"
+                    // ✅ FIX: avoid cutting head by using contain + top alignment
+                    className="h-full w-full object-contain object-top"
                     loading="lazy"
                   />
                 </div>
@@ -71,7 +70,7 @@ export default function MeetCoachKush() {
                   Fitness Coach &amp; Nutritionist
                 </p>
 
-                {/* ✅ MOVED HERE (below Fitness Coach & Nutritionist) */}
+                {/* stats */}
                 <div className="mt-4">
                   <div className="grid grid-cols-2 gap-2 rounded-2xl bg-black/60 backdrop-blur border border-white/15 p-3 shadow-sm text-left">
                     <MiniStatOverlay

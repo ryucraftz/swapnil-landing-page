@@ -8,6 +8,9 @@ import VideoSection from '../components/VideoSection'
 import CallToActionButton from '../components/CallToActionButton'
 import MeetCoachKush from '../components/MeetCoachKush'
 import PhotoTestimonials from '../components/PhotoTestimonials'
+import VideoTestimonialSection from '../components/VideoTestimonialSection'
+import FitDadWhySystemWorks from '../components/FitDadWhySystemWorks'
+import OurPromise from '../components/OurPromise'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +23,10 @@ function App() {
       <CallToActionButton />
       <PhotoTestimonials />
       <MeetCoachKush />
+      <VideoTestimonialSection />
+      <FitDadWhySystemWorks />
+      <OurPromise />
+      <CallToActionButton />
     </>
   )
 }

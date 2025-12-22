@@ -1,3 +1,4 @@
+// PhotoTestimonials.jsx
 import React from "react";
 import { Quote } from "lucide-react";
 
@@ -8,27 +9,50 @@ import t3 from "../src/assets/Image Testimonials/3.jpeg";
 import t4 from "../src/assets/Image Testimonials/4.jpeg";
 import t5 from "../src/assets/Image Testimonials/5.jpeg";
 import t6 from "../src/assets/Image Testimonials/6.jpeg";
+import t7 from "../src/assets/Image Testimonials/7.png";
+import t8 from "../src/assets/Image Testimonials/8.png";
+import t9 from "../src/assets/Image Testimonials/9.png";
+import t10 from "../src/assets/Image Testimonials/10.png";
+import t11 from "../src/assets/Image Testimonials/11.png";
+import t12 from "../src/assets/Image Testimonials/12.png";
+import t13 from "../src/assets/Image Testimonials/13.png";
+import t14 from "../src/assets/Image Testimonials/14.png";
+import t15 from "../src/assets/Image Testimonials/15.png";
+import t16 from "../src/assets/Image Testimonials/16.png";
+import t17 from "../src/assets/Image Testimonials/17.png";
+import t18 from "../src/assets/Image Testimonials/18.png";
 
 export default function PhotoTestimonials() {
   const DATA = [
-    { img: t1, name: "Busy Dad", result: "Lost 10–12 kg • Waist down" },
-    { img: t2, name: "Working Parent", result: "Lost 8–10 kg • Energy up" },
-    { img: t3, name: "Busy Dad", result: "Lost 12–15 kg • Belly down" },
-    { img: t4, name: "Working Parent", result: "Lost 10 kg • Stronger & fitter" },
-    { img: t5, name: "Busy Dad", result: "Lost 11 kg • Stamina improved" },
-    { img: t6, name: "Working Parent", result: "Lost 9 kg • Better routine" },
+    { img: t1 },
+    { img: t2 },
+    { img: t3 },
+    { img: t4 },
+    { img: t5 },
+    { img: t6 },
+    { img: t7 },
+    { img: t8 },
+    { img: t9 },
+    { img: t10 },
+    { img: t11 },
+    { img: t12 },
+    { img: t13 },
+    { img: t14 },
+    { img: t15 },
+    { img: t16 },
+    { img: t17 },
+    { img: t18 },
   ];
 
   return (
-    <section className="relative bg-white py-4 sm:py-16 overflow-hidden">
+    <section className="relative bg-white py-10 sm:py-16 overflow-hidden">
       {/* background accents */}
       <div className="pointer-events-none absolute -top-20 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-sky-200/60 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 right-0 h-72 w-72 rounded-full bg-sky-100/70 blur-3xl" />
 
-      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          {/* small pill */}
           <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 py-2 shadow-sm">
             <span className="h-2 w-2 rounded-full bg-sky-600" />
             <p className="text-xs sm:text-sm font-extrabold tracking-[0.22em] uppercase text-sky-800">
@@ -37,7 +61,7 @@ export default function PhotoTestimonials() {
             <span className="h-2 w-2 rounded-full bg-yellow-300" />
           </div>
 
-          {/* ✅ Mobile: EXACT 3 lines like desktop */}
+          {/* Mobile */}
           <h2 className="mt-5 text-2xl font-extrabold leading-tight text-gray-900 sm:hidden">
             These Parents &amp; Busy Dads Were
             <br />
@@ -46,7 +70,6 @@ export default function PhotoTestimonials() {
             <span className="text-sky-700">Out of Shape.</span>
           </h2>
 
-          {/* ✅ Mobile: Just Like You */}
           <div className="mt-3 flex justify-center sm:hidden">
             <span className="inline-flex items-center gap-3 rounded-2xl border border-sky-200 bg-white px-4 py-2 shadow-md">
               <span className="grid h-8 w-8 place-items-center rounded-xl bg-sky-700 text-white shadow-sm">
@@ -58,7 +81,7 @@ export default function PhotoTestimonials() {
             </span>
           </div>
 
-          {/* ✅ Desktop */}
+          {/* Desktop */}
           <h2 className="hidden sm:block mt-5 text-3xl sm:text-4xl md:text-5xl font-extrabold leading-[1.08] text-gray-900">
             <span className="block">
               These Parents &amp; Busy Dads{" "}
@@ -97,32 +120,30 @@ export default function PhotoTestimonials() {
             </span>
           </h2>
 
-          {/* subtext */}
           <p className="mt-4 text-base font-semibold sm:text-lg text-gray-700">
-            Real people. Real routines. Real results — without extreme diets or long workouts.
+            Real people. Real routines. Real results — without extreme diets or
+            long workouts.
           </p>
         </div>
 
-        {/* Content (FIXED for desktop alignment/width) */}
-        <div className="mt-10">
-          <div className="mx-auto w-full lg:max-w-5xl">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-              {DATA.map((t, idx) => (
-                <TestimonialPhotoCard
-                  key={idx}
-                  img={t.img}
-                  name={t.name}
-                  result={t.result}
-                />
-              ))}
-            </div>
+        {/* Cards */}
+        <div className="mt-8 sm:mt-12">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-7">
+            {DATA.map((t, idx) => (
+              <div key={idx} className="w-full">
+                <PhotoTestimonialCard img={t.img} />
+              </div>
+            ))}
+          </div>
 
-            <div className="mt-6 rounded-3xl border border-sky-200 bg-white p-4 sm:p-5 shadow-sm">
-              <p className="text-sm sm:text-base font-semibold text-gray-900 text-center">
-                You’re not “too late.”
-                <span className="text-sky-700"> You just need a system built for real life.</span>
-              </p>
-            </div>
+          <div className="mt-6 rounded-3xl border border-sky-200 bg-white p-4 sm:p-5 shadow-sm">
+            <p className="text-sm sm:text-base font-semibold text-gray-900 text-center">
+              You’re not “too late.”
+              <span className="text-sky-700">
+                {" "}
+                You just need a system built for real life.
+              </span>
+            </p>
           </div>
         </div>
       </div>
@@ -130,27 +151,20 @@ export default function PhotoTestimonials() {
   );
 }
 
-function TestimonialPhotoCard({ img, name, result }) {
+function PhotoTestimonialCard({ img }) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-sky-200 bg-white shadow-sm">
-      <div className="aspect-[4/5] bg-white p-2">
+    <div className="rounded-3xl overflow-hidden bg-white border border-gray-100 shadow-sm">
+      {/* ✅ fixed frame; use object-contain so nothing gets cut */}
+      <div className="relative h-64 sm:h-72 md:h-80 w-full bg-white p-3 sm:p-4">
         <img
           src={img}
-          alt={name}
-          className="h-full w-full object-contain"
+          alt="Client transformation"
           loading="lazy"
+          className="h-full w-full object-contain"
         />
-      </div>
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-
-      <div className="absolute inset-x-3 bottom-3">
-        <div className="rounded-xl bg-black/55 backdrop-blur border border-white/15 p-2.5">
-          <p className="text-xs sm:text-sm font-extrabold text-white leading-tight">
-            {result}
-          </p>
-          <p className="mt-1 text-[11px] sm:text-xs text-white/85">{name}</p>
-        </div>
+        {/* subtle fade (very light) */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/0 via-transparent to-black/0" />
       </div>
     </div>
   );

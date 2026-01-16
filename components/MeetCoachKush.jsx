@@ -14,13 +14,12 @@ export default function MeetCoachKush() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
-            Meet Your Coach <span className="text-sky-700">Kush Solanki</span>
+            Meet Your Coach <span className="text-sky-700">Deepesh</span>
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-gray-600">
-            From Confusion to Clarity —{" "}
             <span className="font-semibold text-gray-800">
-              I Didn’t Just Study Fitness, I Lived the Struggle.
+              I work exclusively with working fathers who want to lose fat, regain energy, and feel strong again without sacrificing their family or career.
             </span>
           </p>
         </div>
@@ -34,7 +33,7 @@ export default function MeetCoachKush() {
                 <div className="aspect-[4/5] sm:aspect-[5/6] lg:aspect-[4/5]">
                   <img
                     src={coachImg}
-                    alt="Coach Kush Solanki"
+                    alt="Coach Deepesh"
                     // ✅ FIX: avoid cutting head by using contain + top alignment
                     className="h-full w-full object-contain object-top"
                     loading="lazy"
@@ -56,7 +55,7 @@ export default function MeetCoachKush() {
                   <div className="hidden sm:inline-flex items-center gap-2 rounded-full bg-yellow-300 px-3 py-1.5 border border-yellow-200 shadow-sm">
                     <Sparkles className="h-4 w-4 text-black" />
                     <span className="text-xs sm:text-sm font-semibold text-black">
-                      FitDad System
+                      IRON DAD CLUB™
                     </span>
                   </div>
                 </div>
@@ -64,7 +63,7 @@ export default function MeetCoachKush() {
 
               <div className="mt-4 text-center">
                 <p className="text-lg sm:text-xl font-extrabold text-gray-900">
-                  Kush Solanki
+                  Deepesh
                 </p>
                 <p className="mt-1 text-sm text-gray-600">
                   Fitness Coach &amp; Nutritionist
@@ -106,31 +105,12 @@ export default function MeetCoachKush() {
                 {/* ✅ UPDATED STORY (short + relevant, Fit Dad angle) */}
                 <div className="mt-3 space-y-3 text-gray-800 leading-relaxed">
                   <p>
-                    In the corporate world, I kept seeing the same pattern — most people
-                    over 30 (especially parents) were struggling with weight, even after
-                    trying diets, workouts, and trainers.
+                    <span className="font-semibold text-black">IRON DAD CLUB™</span> exists because most fitness plans
+                    are built for young, single people with unlimited time.
                   </p>
 
                   <p>
-                    The problem wasn’t knowledge. It was life: long hours, kids, travel,
-                    stress — and{" "}
-                    <span className="font-semibold text-black">
-                      no structure or daily accountability.
-                    </span>
-                  </p>
-
-                  <p>
-                    That’s why I built the{" "}
-                    <span className="font-semibold text-black">Fit Dad Program</span> —
-                    simple nutrition, short realistic workouts, and daily check-ins that
-                    keep busy dads consistent even on bad days.
-                  </p>
-
-                  <p>
-                    Because when structure + accountability are in place,{" "}
-                    <span className="font-semibold text-black">
-                      results stop being accidental — they become inevitable.
-                    </span>
+                    This system is built for fathers with jobs, stress, responsibilities, and real lives.
                   </p>
                 </div>
               </div>
@@ -141,16 +121,16 @@ export default function MeetCoachKush() {
                     Expertise &amp; Experience
                   </h4>
                   <span className="rounded-full bg-yellow-200 px-3 py-1 text-xs font-semibold text-black">
-                    Built for busy parents
+                    Built for working fathers
                   </span>
                 </div>
 
                 <ul className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <Bullet>ISSA Certified Fitness Coach &amp; Nutritionist</Bullet>
-                  <Bullet>8+ years of online coaching experience</Bullet>
-                  <Bullet>1200+ successful client transformations</Bullet>
-                  <Bullet>Specialised in coaching Busy dads &amp; parents</Bullet>
-                  <Bullet>Clients across 8+ countries</Bullet>
+                  <Bullet>My name is Deepesh</Bullet>
+                  {/* Keeping some existing bullets or simplifying */}
+                  <Bullet>Specialised in coaching working fathers</Bullet>
+                  <Bullet>No crash dieting</Bullet>
+                  <Bullet>No long gym sessions</Bullet>
                 </ul>
               </div>
 

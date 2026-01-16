@@ -68,9 +68,8 @@ export default function VideoSection() {
           >
             {/* Poster/Skeleton overlay (visible immediately) */}
             <div
-              className={`absolute inset-0 transition-opacity duration-500 ${
-                playerDefined ? "opacity-0 pointer-events-none" : "opacity-100"
-              }`}
+              className={`absolute inset-0 transition-opacity duration-500 ${playerDefined ? "opacity-0 pointer-events-none" : "opacity-100"
+                }`}
             >
               {/* subtle dark overlay */}
               <div className="absolute inset-0 bg-black/35" />
@@ -99,9 +98,8 @@ export default function VideoSection() {
       <div className="mt-5 px-4">
         <div className="inline-flex items-center gap-2 rounded-full border border-sky-400 bg-sky-100 px-4 py-2 shadow-sm">
           <p className="text-center text-sm sm:text-base font-semibold text-slate-800">
-            Watch how{" "}
-            <span className="text-sky-600">busy Dads &amp; Parents</span>{" "}
-            transformed their bodies <span className="text-sky-600">for life</span>.
+            Watch how <span className="text-sky-600">busy fathers</span> lose 10–15 kilos of fat while{" "}
+            <span className="text-sky-600">eating normal Indian food</span> and managing work and family life.
           </p>
         </div>
       </div>

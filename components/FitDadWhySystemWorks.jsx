@@ -3,25 +3,39 @@ import React, { useEffect, useRef, useState } from "react";
 
 
 const DEFAULT_DATA = {
-  headingTop: "WHY THIS SYSTEM WORKS",
-  headingBottom: "(And What You Get)",
-  sub1: "This isn’t another diet or workout plan.",
-  sub2:
-    "It’s a personalized, lifestyle-based transformation system for parents and busy adults who want results that last.",
-  listTitle: "Inside the FitDad Transformation Blueprint, You Get:",
+  headingTop: "WHAT YOU WILL GET",
+  headingBottom: "",
+  sub1: "Everything you need to lose fat and build strength without disrupting your life.",
+  sub2: "",
+  listTitle: "Inside the IRON DAD CLUB™, You Get:",
   items: [
-    "Personalized fat-loss system",
-    "20–30 min home workouts",
-    "Weekly 1-on-1 coaching",
-    "Daily accountability & support",
-    "Personalized Indian nutrition strategy",
-    "Sleep & habit optimization",
-    "Long-term health roadmap",
-    "Outside eating & social life playbook",
-    "Support for BP & blood sugar management",
+    {
+      title: "Complete Dad-Specific Assessment",
+      desc: "So YOU get a plan built around your body, schedule, and stress",
+    },
+    {
+      title: "Indian Fat Loss Nutrition Plan",
+      desc: "So YOU lose belly fat while eating with your family",
+    },
+    {
+      title: "20–30 Minute Home Workouts",
+      desc: "So YOU stay consistent without exhausting your day",
+    },
+    {
+      title: "Weekly 1:1 Coaching",
+      desc: "So YOUR plan adapts as life changes",
+    },
+    {
+      title: "Daily Accountability & Support",
+      desc: "So YOU don’t fall off track during busy weeks",
+    },
+    {
+      title: "Travel, Festival & Eating-Out Strategies",
+      desc: "So fat loss continues even during real-life situations",
+    },
   ],
   footer:
-    "Built using science-backed principles followed by elite-level transformations.",
+    "Built for fathers with jobs, stress, responsibilities, and real lives.",
 };
 
 function DotIcon() {
@@ -136,7 +150,7 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
                   const isLast = idx === items.length - 1;
 
                   return (
-                    <li key={`${item}-${idx}`} className="relative pl-12 sm:pl-14">
+                    <li key={idx} className="relative pl-12 sm:pl-14">
                       {/* DOT moved OUTSIDE the card so it never overlaps on mobile */}
                       <div className="absolute left-[22px] top-6 z-10 -translate-x-1/2">
                         <DotIcon />
@@ -158,8 +172,12 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
 
                         <div className="min-w-0">
                           <p className="text-sm font-extrabold text-slate-900 sm:text-base">
-                            {item}
+                            {item.title}
                           </p>
+                          <div className="mt-1 flex items-start gap-1 text-sm text-slate-600">
+                            <span className="text-blue-500 font-bold">→</span>
+                            <span>{item.desc}</span>
+                          </div>
                         </div>
                       </div>
 

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import useRazorpay from "../src/hooks/useRazorpay";
 
-export default function CallToActionButton() {
+export default function CallToActionButton(props) {
   const isLoaded = useRazorpay();
 
   const handlePayment = () => {
@@ -80,9 +80,10 @@ export default function CallToActionButton() {
         whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.96 }}
       >
-        Book Your 1:1 FitDad Transformation Call
+        {props.text || "Apply for IRON DAD CLUB™"}
         <span className="animate-cross-line"></span>
       </motion.button>
+
     </motion.div>
   );
 }

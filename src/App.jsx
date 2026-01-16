@@ -7,11 +7,13 @@ import VideoSection from "../components/VideoSection";
 import CallToActionButton from "../components/CallToActionButton";
 import MeetCoachKush from "../components/MeetCoachKush";
 import PhotoTestimonials from "../components/PhotoTestimonials";
-import VideoTestimonialSection from "../components/VideoTestimonialSection";
+// import VideoTestimonialSection from "../components/VideoTestimonialSection"; // Removed as not in request
 import FitDadWhySystemWorks from "../components/FitDadWhySystemWorks";
-import OurPromise from "../components/OurPromise";
+// import OurPromise from "../components/OurPromise"; // Removed as not in request
+import FAQ from "../components/FAQ";
+import FinalCTA from "../components/FinalCTA";
 
-import StickyBar from "../components/StickyBar"; 
+import StickyBar from "../components/StickyBar";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,14 +23,28 @@ function App() {
       <div className="pb-28 sm:pb-32">
         <Review />
         <Hero />
+        {/* VSL */}
         <VideoSection />
-        <CallToActionButton />
+
+        {/* Social Proof */}
         <PhotoTestimonials />
-        <VideoTestimonialSection />
-        <MeetCoachKush />
+
+        {/* What You Will Get */}
         <FitDadWhySystemWorks />
-        <OurPromise />
-        <CallToActionButton />
+
+        {/* CTA */}
+        <div className="flex justify-center py-8">
+          <CallToActionButton text="Apply for IRON DAD CLUB™" />
+        </div>
+
+        {/* About */}
+        <MeetCoachKush />
+
+        {/* FAQS */}
+        <FAQ />
+
+        {/* Final CTA */}
+        <FinalCTA />
       </div>
 
       <StickyBar />

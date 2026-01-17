@@ -17,19 +17,19 @@ const StickyBar = () => {
       key: import.meta.env.VITE_RAZORPAY_KEY_ID,
       amount: "50000",
       currency: "INR",
-      name: "Acme Corp",
-      description: "Test Transaction",
-      image: "https://example.com/your_logo",
+      name: "Iron Dad Club",
+      description: "1:1 FitDad Transformation Call",
+      image: "https://example.com/your_logo", // You might want to update this too
       handler: function (response) {
         alert(JSON.stringify(response));
       },
       prefill: {
-        name: "Piyush Garg",
-        email: "youremail@example.com",
-        contact: "9999999999",
+        name: "",
+        email: "",
+        contact: "",
       },
       notes: {
-        address: "Razorpay Corporate Office",
+        address: "Iron Dad Club Office",
       },
       theme: {
         color: "#3399cc",

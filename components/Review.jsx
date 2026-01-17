@@ -22,23 +22,23 @@ const AnimatedNumber = ({ value, duration = 2 }) => {
 const Review = () => {
   return (
     <div className="w-full flex justify-center py-6">
-      <div className="flex items-center gap-2 px-6 py-3 rounded-full bg-slate-900/50 backdrop-blur-md border border-slate-700/50 shadow-xl shadow-black/20 hover:shadow-black/40 transition-all duration-300 transform hover:-translate-y-1">
-        <div className="flex items-center gap-2 text-sm sm:text-base text-slate-200">
-          <div className="bg-amber-500/10 p-1.5 rounded-full">
+      <div className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/70 backdrop-blur-md border border-slate-200 shadow-lg shadow-slate-200/50 hover:shadow-slate-300 transition-all duration-300 transform hover:-translate-y-1">
+        <div className="flex items-center gap-2 text-sm sm:text-base text-slate-700">
+          <div className="bg-amber-100 p-1.5 rounded-full">
             <Star
-              className="text-amber-400 fill-amber-400"
+              className="text-amber-500 fill-amber-500"
               size={18}
               strokeWidth={2.5}
             />
           </div>
 
           {/* Text + Animated 400 */}
-          <span className="font-bold tracking-tight text-slate-100">ISSA Certified Coach</span>
+          <span className="font-bold tracking-tight text-slate-900">ISSA Certified Coach</span>
 
-          <span className="mx-2 text-slate-600">|</span>
+          <span className="mx-2 text-slate-300">|</span>
 
           <span className="font-medium">
-            <span className="font-bold text-amber-500"><AnimatedNumber value={400} /></span> Transformations
+            <span className="font-bold text-amber-600"><AnimatedNumber value={400} /></span> Transformations
           </span>
         </div>
       </div>

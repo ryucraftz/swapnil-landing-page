@@ -1,59 +1,9 @@
 import { motion } from "framer-motion";
-import useRazorpay from "../src/hooks/useRazorpay";
+// import useRazorpay from "../src/hooks/useRazorpay"; // Removed Razorpay
+
+const CALENDLY_LINK = "#"; // 🔴 TODO: Replace with actual Calendly link
 
 export default function CallToActionButton(props) {
-  const isLoaded = useRazorpay();
-
-  const handlePayment = () => {
-    if (!isLoaded) return;
-
-    if (!import.meta.env.VITE_RAZORPAY_KEY_ID) {
-      alert("Error: Razorpay Key ID is missing. Please check Vercel Environment Variables.");
-      return;
-    }
-
-    const options = {
-      key: import.meta.env.VITE_RAZORPAY_KEY_ID,
-      amount: "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-      currency: "INR",
-      name: "Acme Corp",
-      description: "Test Transaction",
-      image: "https://example.com/your_logo",
-      handler: function (response) {
-        alert(JSON.stringify(response));
-        // alert(response.razorpay_payment_id);
-        // alert(response.razorpay_order_id);
-        // alert(response.razorpay_signature);
-      },
-      prefill: {
-        name: "Piyush Garg",
-        email: "youremail@example.com",
-        contact: "9999999999",
-      },
-      notes: {
-        address: "Razorpay Corporate Office",
-      },
-      theme: {
-        color: "#3399cc",
-      },
-    };
-
-    const rzp1 = new window.Razorpay(options);
-    rzp1.on("payment.failed", function (response) {
-      alert(JSON.stringify(response));
-      // alert(response.error.code);
-      // alert(response.error.description);
-      // alert(response.error.source);
-      // alert(response.error.step);
-      // alert(response.error.reason);
-      // alert(response.error.metadata.order_id);
-      // alert(response.error.metadata.payment_id);
-    });
-
-    rzp1.open();
-  };
-
-
   return (
     <motion.div
       className="py-4 px-4 sm:px-0 flex justify-center"
@@ -61,9 +11,10 @@ export default function CallToActionButton(props) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <motion.button
-        onClick={handlePayment}
-        disabled={!isLoaded}
+      <motion.a
+        href={CALENDLY_LINK}
+        target="_blank"
+        rel="noopener noreferrer"
         className="
           relative inline-flex w-full sm:max-w-md
           items-center justify-center text-center
@@ -75,15 +26,15 @@ export default function CallToActionButton(props) {
           transition-all duration-300 ease-out
           max-[380px]:text-[13px] max-[380px]:px-5
           cursor-pointer
-          disabled:opacity-50 disabled:cursor-not-allowed
           border border-red-500/30 hover:border-red-400/80
+          no-underline
         "
         whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.96 }}
       >
         {props.text || "Apply for IRON DAD CLUB™"}
         <span className="animate-cross-line"></span>
-      </motion.button>
+      </motion.a>
 
     </motion.div>
   );

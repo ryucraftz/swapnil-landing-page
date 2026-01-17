@@ -6,20 +6,20 @@ import FadeIn from "./FadeIn";
 export default function FAQ() {
   const faqs = [
     {
-      question: "Will this work if I’ve failed before?",
-      answer: "Yes. Most fathers fail because plans don’t fit real life. This one does.",
+      question: "Will this work for my type of pain?",
+      answer: "If your pain has lasted months or years, this approach helps identify and correct its root cause.",
     },
     {
-      question: "Do I need to give up roti, rice, or Indian food?",
-      answer: "No. The system is designed around normal Indian meals.",
+      question: "What if I’ve already tried physiotherapy or exercise?",
+      answer: "Most routines aren’t personalized. This program is built specifically around your movement patterns.",
     },
     {
-      question: "How much time will this take daily?",
-      answer: "20–30 minutes of training, plus simple daily habits.",
+      question: "Is this safe?",
+      answer: "Yes. Recovery is progressive, controlled, and designed to avoid flare-ups or injury.",
     },
     {
-      question: "What if I have health issues like BP or diabetes?",
-      answer: "The program is adjusted safely based on your condition.",
+      question: "Do I need to be fit or flexible?",
+      answer: "No. This program is for recovery first, strength later.",
     },
   ];
 

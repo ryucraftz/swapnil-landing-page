@@ -5,7 +5,7 @@ import Review from "../components/Review";
 import Hero from "../components/Hero";
 import VideoSection from "../components/VideoSection";
 import CallToActionButton from "../components/CallToActionButton";
-import MeetCoachDeepesh from "../components/MeetCoachDeepesh";
+import MeetCoachSwapnil from "../components/MeetCoachSwapnil";
 import PhotoTestimonials from "../components/PhotoTestimonials";
 import FitDadWhySystemWorks from "../components/FitDadWhySystemWorks";
 import FAQ from "../components/FAQ";
@@ -42,7 +42,7 @@ function App() {
 
         {/* CTA 1 */}
         <div className="flex justify-center py-6 sm:py-8">
-          <CallToActionButton text="Book Your 1:1 FitDad Transformation Call" />
+          <CallToActionButton text="Apply for The Pain Reset 90™" />
         </div>
 
         {/* Social Proof */}
@@ -51,7 +51,7 @@ function App() {
 
         {/* CTA 2 */}
         <div className="flex justify-center py-6 sm:py-8">
-          <CallToActionButton text="Book Your 1:1 FitDad Transformation Call" />
+          <CallToActionButton text="Apply for The Pain Reset 90™" />
         </div>
 
         {/* What You Will Get */}
@@ -59,15 +59,15 @@ function App() {
 
         {/* CTA 3 (Existing) */}
         <div className="flex justify-center py-8">
-          <CallToActionButton text="Book Your 1:1 FitDad Transformation Call" />
+          <CallToActionButton text="Apply for The Pain Reset 90™" />
         </div>
 
         {/* About */}
-        <MeetCoachDeepesh />
+        <MeetCoachSwapnil />
 
         {/* CTA 4 */}
         <div className="flex justify-center py-6 sm:py-8">
-          <CallToActionButton text="Book Your 1:1 FitDad Transformation Call" />
+          <CallToActionButton text="Apply for The Pain Reset 90™" />
         </div>
 
         {/* FAQS */}

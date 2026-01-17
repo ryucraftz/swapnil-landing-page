@@ -21,15 +21,14 @@ export default function PhotoTestimonials({ hideHeader = false }) {
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-slate-900 mb-6">
-              Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">working fathers</span>
+              Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">entrepreneurs and professionals</span>
               <br />
-              who were <span className="text-slate-500">tired, overweight, and inconsistent</span>
+              who lived with <span className="text-slate-500">chronic pain for months or years</span>
             </h2>
 
             <p className="mt-6 text-lg sm:text-xl font-medium text-slate-600 leading-relaxed max-w-3xl mx-auto">
-              and <span className="text-amber-600 font-bold">lost significant fat, regained energy, and built strength</span>{" "}
-              <span className="hidden sm:inline"> </span>
-              without crash dieting or long gym sessions.
+              and <span className="text-amber-600 font-bold">returned to comfortable daily movement</span>{" "}
+              through structured, personalized recovery.
             </p>
           </FadeIn>
         )}

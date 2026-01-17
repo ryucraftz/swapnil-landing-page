@@ -16,8 +16,7 @@ export default function VideoSection() {
       <div className="mt-5 px-4 w-full flex justify-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 backdrop-blur-md px-4 py-2 shadow-lg shadow-slate-200/50">
           <p className="text-center text-sm sm:text-base font-semibold text-slate-700">
-            Watch how <span className="text-blue-600 font-bold">busy fathers</span> lose 10–15 kilos of fat while{" "}
-            <span className="text-amber-600 font-bold">eating normal Indian food</span>.
+            Watch how <span className="text-blue-600 font-bold">chronic pain is reversed</span> by correcting movement patterns not by masking symptoms or forcing exercise.
           </p>
         </div>
       </div>

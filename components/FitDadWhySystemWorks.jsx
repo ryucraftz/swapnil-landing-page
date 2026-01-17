@@ -5,37 +5,33 @@ import FadeIn from "./FadeIn";
 const DEFAULT_DATA = {
   headingTop: "WHAT YOU WILL GET",
   headingBottom: "",
-  sub1: "Everything you need to lose fat and build strength without disrupting your life.",
+  sub1: "A complete system to fix chronic pain at the root.",
   sub2: "",
-  listTitle: "Inside the IRON DAD CLUB™, You Get:",
+  listTitle: "Inside The Pain Reset 90™, You Get:",
   items: [
     {
-      title: "Complete Dad-Specific Assessment",
-      desc: "So YOU get a plan built around your body, schedule, and stress",
+      title: "1:1 Root-Cause Assessment",
+      desc: "So YOU know exactly what’s creating your pain",
     },
     {
-      title: "Indian Fat Loss Nutrition Plan",
-      desc: "So YOU lose belly fat while eating with your family",
+      title: "Personalized Movement Recovery Plan",
+      desc: "So YOU stop doing generic routines that make pain worse",
     },
     {
-      title: "20–30 Minute Home Workouts",
-      desc: "So YOU stay consistent without exhausting your day",
+      title: "Weekly Private Online Sessions",
+      desc: "So YOU recover safely with expert guidance",
     },
     {
-      title: "Weekly 1:1 Coaching",
-      desc: "So YOUR plan adapts as life changes",
+      title: "Flare-Up Support & Corrections",
+      desc: "So YOU never feel stuck or unsure",
     },
     {
-      title: "Daily Accountability & Support",
-      desc: "So YOU don’t fall off track during busy weeks",
-    },
-    {
-      title: "Travel, Festival & Eating-Out Strategies",
-      desc: "So fat loss continues even during real-life situations",
+      title: "Structured Progression to Strength",
+      desc: "So YOU move confidently without relapse",
     },
   ],
   footer:
-    "Built for fathers with jobs, stress, responsibilities, and real lives.",
+    "Built for entrepreneurs and professionals who need results without the risk.",
 };
 
 function DotIcon() {

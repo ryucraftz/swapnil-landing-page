@@ -1,5 +1,4 @@
-// FitDadTimelineBlueprint.jsx
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import FadeIn from "./FadeIn";
 
 const DEFAULT_DATA = {
@@ -34,154 +33,105 @@ const DEFAULT_DATA = {
     "Built for entrepreneurs and professionals who need results without the risk.",
 };
 
-function DotIcon({ active }) {
+function BentoCard({ item, idx, className = "", dark = false }) {
+  const n = String(idx + 1).padStart(2, "0");
+
   return (
-    <div className="relative flex items-center justify-center">
-      <div className={`absolute inset-0 rounded-full bg-teal-400 opacity-20 blur-md transition-all duration-500 ${active ? "scale-150 opacity-40" : "scale-100"}`} />
-      <span className={`relative inline-flex h-4 w-4 rounded-full ring-2 ring-white transition-all duration-500 ${active ? "bg-amber-400 scale-125" : "bg-teal-200"}`} />
-    </div>
+    <FadeIn delay={idx * 0.1} className={`relative group overflow-hidden rounded-[2rem] p-6 sm:p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl ${className} ${dark ? 'shadow-2xl shadow-slate-900/20' : 'shadow-lg shadow-slate-200/50 border'}`}>
+      {/* Number Watermark */}
+      <span className={`absolute -right-4 -top-8 text-[8rem] font-serif font-black leading-none opacity-5 select-none transition-transform duration-700 group-hover:scale-110 ${dark ? 'text-white' : 'text-slate-900'}`}>
+        {n}
+      </span>
+
+      <div className="relative z-10 flex flex-col h-full justify-between">
+        <div className="mb-4">
+          <div className={`inline-flex items-center justify-center w-10 h-10 rounded-full text-sm font-bold mb-4 ${dark ? 'bg-teal-500 text-white' : 'bg-slate-100 text-slate-700'}`}>
+            {n}
+          </div>
+
+          <h3 className={`text-xl sm:text-2xl font-bold mb-2 font-display ${dark ? 'text-white' : 'text-slate-900'}`}>
+            {item.title}
+          </h3>
+        </div>
+
+        <p className={`text-sm sm:text-base font-medium leading-relaxed ${dark ? 'text-slate-300' : 'text-slate-600'}`}>
+          {item.desc}
+        </p>
+      </div>
+
+      {/* Hover Gradient Overlay */}
+      {!dark && (
+        <div className="absolute inset-0 bg-gradient-to-tr from-teal-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      )}
+    </FadeIn>
   );
 }
 
 export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
   const items = data.items || [];
 
-  const [visible, setVisible] = useState(() => items.map(() => false));
-  const itemRefs = useRef([]);
-
-  useEffect(() => {
-    const mq = window.matchMedia("(max-width: 640px)");
-    const isMobile = mq.matches;
-
-    // Desktop/tablet: show all
-    if (!isMobile) {
-      setVisible(items.map(() => true));
-      return;
-    }
-
-    // Mobile: reveal as scroll
-    setVisible(items.map(() => false));
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const idx = Number(entry.target.getAttribute("data-idx"));
-          if (Number.isNaN(idx)) return;
-
-          setVisible((prev) => {
-            if (prev[idx]) return prev;
-            const next = [...prev];
-            next[idx] = true;
-            return next;
-          });
-        });
-      },
-      { threshold: 0.22, rootMargin: "0px 0px -18% 0px" }
-    );
-
-    itemRefs.current.forEach((el) => el && io.observe(el));
-    return () => io.disconnect();
-  }, [items]);
-
   return (
-    <section className="relative w-full overflow-hidden py-16 sm:py-24">
+    <section className="relative w-full py-16 sm:py-24 overflow-hidden">
       {/* Dynamic Background Elements */}
-      <div className="absolute top-1/4 left-0 w-full h-[500px] bg-gradient-to-b from-teal-50/0 via-teal-50/50 to-teal-50/0 -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl h-[600px] bg-gradient-to-r from-teal-500/5 via-purple-500/5 to-amber-500/5 blur-3xl -z-10 rounded-full opacity-70" />
 
       <div className="relative mx-auto max-w-6xl px-4">
-        {/* Header */}
-        <FadeIn className="mx-auto max-w-3xl text-center mb-16">
+        {/* Header - Centered & Compact */}
+        <FadeIn className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 font-headings">
-            {data.headingTop}
+            {data.listTitle}
           </h2>
-          <p className="text-lg sm:text-xl font-medium text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl font-medium text-slate-600">
             {data.sub1}
           </p>
         </FadeIn>
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+        {/* BENTO GRID LAYOUT - Shorter & Creative */}
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4 sm:gap-6 auto-rows-fr">
 
-          {/* Sticky Summary Card (Left) */}
-          <div className="lg:col-span-4 lg:sticky lg:top-8">
-            <FadeIn>
-              <div className="rounded-3xl bg-slate-900 text-white p-8 shadow-2xl shadow-slate-900/20 relative overflow-hidden group">
-                {/* Abstract Shapes */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/20 rounded-full blur-3xl -mr-10 -mt-10 group-hover:bg-teal-500/30 transition-colors duration-700" />
-                <div className="absolute bottom-0 left-0 w-32 h-32 bg-amber-500/20 rounded-full blur-3xl -ml-10 -mb-10 group-hover:bg-amber-500/30 transition-colors duration-700" />
+          {/* Item 1: Large Feature (Span 3) */}
+          <BentoCard
+            item={items[0]}
+            idx={0}
+            className="md:col-span-3 bg-slate-900 text-white"
+            dark
+          />
 
-                <h3 className="text-xl font-bold uppercase tracking-wider mb-2 font-display">
-                  The System
-                </h3>
-                <div className="h-1 w-12 bg-teal-500 rounded-full mb-6" />
+          {/* Item 2: Compact (Span 3) */}
+          <BentoCard
+            item={items[1]}
+            idx={1}
+            className="md:col-span-3 bg-white border-teal-100"
+          />
 
-                <p className="text-3xl font-serif font-medium leading-tight mb-8 text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-emerald-100">
-                  {data.listTitle}
-                </p>
+          {/* Item 3: Tall/Vertical (Span 2) */}
+          <BentoCard
+            item={items[2]}
+            idx={2}
+            className="md:col-span-2 bg-white border-slate-100"
+          />
 
-                <p className="text-slate-400 text-sm leading-relaxed border-t border-slate-700 pt-6 italic">
-                  "{data.footer}"
-                </p>
-              </div>
-            </FadeIn>
-          </div>
+          {/* Item 4: Tall/Vertical (Span 2) */}
+          <BentoCard
+            item={items[3]}
+            idx={3}
+            className="md:col-span-2 bg-gradient-to-br from-teal-50 to-emerald-50 border-teal-200"
+          />
 
-          {/* Timeline (Right) */}
-          <div className="lg:col-span-8 relative">
-            {/* The Spine */}
-            <div className="absolute left-[19px] sm:left-[27px] top-4 bottom-12 w-[3px] bg-gradient-to-b from-teal-500 via-emerald-400 to-transparent rounded-full opacity-30" />
-
-            <div className="space-y-8 sm:space-y-12">
-              {items.map((item, idx) => {
-                const n = String(idx + 1).padStart(2, "0");
-                const show = visible[idx];
-
-                return (
-                  <div
-                    key={idx}
-                    ref={(el) => (itemRefs.current[idx] = el)}
-                    data-idx={idx}
-                    className="relative pl-12 sm:pl-20"
-                  >
-                    {/* Node */}
-                    <div className="absolute left-0 sm:left-2 top-0 sm:top-2 w-10 sm:w-14 flex justify-center z-10">
-                      <DotIcon active={show} />
-                    </div>
-
-                    {/* Card */}
-                    <div className={`
-                        relative group rounded-2xl p-6 sm:p-8 
-                        bg-white/60 backdrop-blur-md border border-white/50 shadow-lg shadow-teal-900/5
-                        transition-all duration-700 ease-out
-                        hover:bg-white hover:shadow-xl hover:shadow-teal-900/10 hover:border-teal-200/50 hover:-translate-y-1
-                        ${show ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}
-                    `}>
-                      <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center">
-                        {/* Number Badge */}
-                        <div className="flex-shrink-0">
-                          <span className="text-4xl sm:text-5xl font-black text-slate-100 group-hover:text-teal-50 transition-colors font-serif">
-                            {n}
-                          </span>
-                        </div>
-
-                        {/* Content */}
-                        <div>
-                          <h4 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 font-display">
-                            {item.title}
-                          </h4>
-                          <p className="text-slate-600 text-base sm:text-lg leading-relaxed group-hover:text-slate-700">
-                            <span className="text-amber-500 font-bold mr-2">→</span>
-                            {item.desc}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+          {/* Item 5: Feature End (Span 2) */}
+          <BentoCard
+            item={items[4]}
+            idx={4}
+            className="md:col-span-2 bg-white border-amber-100"
+          />
         </div>
+
+        {/* Footer Note */}
+        <FadeIn delay={0.6} className="mt-12 text-center">
+          <p className="inline-block px-6 py-2 rounded-full bg-white/50 backdrop-blur border border-slate-200 text-sm font-semibold text-slate-500 italic">
+            "{data.footer}"
+          </p>
+        </FadeIn>
       </div>
     </section>
   );

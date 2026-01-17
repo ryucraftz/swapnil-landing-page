@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 import Review from "../components/Review";
@@ -7,15 +7,24 @@ import VideoSection from "../components/VideoSection";
 import CallToActionButton from "../components/CallToActionButton";
 import MeetCoachDeepesh from "../components/MeetCoachDeepesh";
 import PhotoTestimonials from "../components/PhotoTestimonials";
-// import VideoTestimonialSection from "../components/VideoTestimonialSection"; // Removed as not in request
 import FitDadWhySystemWorks from "../components/FitDadWhySystemWorks";
-// import OurPromise from "../components/OurPromise"; // Removed as not in request
 import FAQ from "../components/FAQ";
 import FinalCTA from "../components/FinalCTA";
 import StickyBar from "../components/StickyBar";
+import ThankYou from "../components/ThankYou";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [isThankYou, setIsThankYou] = useState(false);
+
+  useEffect(() => {
+    if (window.location.pathname === "/thank-you") {
+      setIsThankYou(true);
+    }
+  }, []);
+
+  if (isThankYou) {
+    return <ThankYou />;
+  }
 
   return (
     <>
@@ -31,6 +40,7 @@ function App() {
         </div>
 
         {/* Social Proof */}
+        {/* Explicitly confusing prop naming fixed by just not passing it for default behavior */}
         <PhotoTestimonials />
 
         {/* CTA 2 */}

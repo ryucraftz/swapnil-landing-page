@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import FadeIn from "./FadeIn";
-import RevealWords from "./RevealWords";
 
 const DEFAULT_DATA = {
   headingTop: "WHAT YOU WILL GET",
@@ -89,12 +88,14 @@ export default function FitDadTreeTimeline({ data = DEFAULT_DATA }) {
       <div className="relative mx-auto max-w-6xl px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24">
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 font-headings">
-            <RevealWords text={data.listTitle} delay={0.2} />
-          </h2>
-          <div className="text-lg sm:text-xl font-medium text-slate-600">
-            <RevealWords text={data.sub1} delay={0.4} />
-          </div>
+          <FadeIn>
+            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 font-headings">
+              {data.listTitle}
+            </h2>
+            <p className="text-lg sm:text-xl font-medium text-slate-600">
+              {data.sub1}
+            </p>
+          </FadeIn>
         </div>
 
         {/* TREE CONTAINER */}
@@ -113,12 +114,12 @@ export default function FitDadTreeTimeline({ data = DEFAULT_DATA }) {
                 >
                   {/* CENTRAL NODE (Desktop) */}
                   <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center w-8 h-8 z-20">
-                    <div className="w-4 h-4 rounded-full bg-teal-500 ring-4 ring-white shadow-lg group-hover:scale-125 group-hover:bg-amber-400 transition-all duration-500" />
+                    <div className="w-4 h-4 rounded-full bg-cyan-400 ring-4 ring-white shadow-lg group-hover:scale-125 group-hover:bg-teal-300 transition-all duration-500" />
                   </div>
 
                   {/* MOBILE NODE (Left side) */}
                   <div className="md:hidden absolute left-4 flex items-center justify-center w-8 h-8 z-20 -translate-x-1/2">
-                    <div className="w-4 h-4 rounded-full bg-teal-500 ring-4 ring-white shadow-lg" />
+                    <div className="w-4 h-4 rounded-full bg-cyan-400 ring-4 ring-white shadow-lg" />
                   </div>
 
                   {/* LEFT SIDE CONTENT (Desktop Only - Even Items) */}

@@ -151,7 +151,7 @@ function MiniStatOverlay({ icon, label }) {
 function Bullet({ children }) {
   return (
     <li className="flex items-start gap-2 rounded-2xl border border-slate-200 bg-white/50 px-3 py-3 hover:border-slate-300 transition-colors">
-      <span className="mt-1.5 h-2 w-2 rounded-full bg-teal-500 shrink-0 shadow-[0_0_8px_#14b8a6]" />
+      <span className="mt-1.5 h-2 w-2 rounded-full bg-cyan-400 shrink-0 shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
       <span className="text-sm sm:text-base text-slate-700 leading-snug">
         {children}
       </span>

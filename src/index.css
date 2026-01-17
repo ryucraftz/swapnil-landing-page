@@ -22,8 +22,8 @@ html {
 }
 
 ::selection {
-  background-color: #0f172a;
-  /* Slate-900 */
+  background-color: #06b6d4;
+  /* Cyan-500 */
   color: white;
 }
 
@@ -31,14 +31,14 @@ body {
   background-color: #f8fafc;
   /* Premium Light Base */
   background-image:
-    radial-gradient(at 0% 0%, rgba(20, 184, 166, 0.25) 0px, transparent 50%),
-    /* Teal-500 (Primary) */
-    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.20) 0px, transparent 50%),
-    /* Indigo-500 (Depth) */
-    radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.20) 0px, transparent 50%),
-    /* Emerald-500 (Healing) */
-    radial-gradient(at 0% 100%, rgba(45, 212, 191, 0.15) 0px, transparent 50%);
-  /* Teal-400 (Minty Light) */
+    radial-gradient(at 0% 0%, rgba(204, 251, 241, 0.4) 0px, transparent 50%),
+    /* Teal-50 (Mint) */
+    radial-gradient(at 100% 0%, rgba(241, 245, 249, 0.6) 0px, transparent 50%),
+    /* Slate-100 (Platinum) */
+    radial-gradient(at 100% 100%, rgba(224, 242, 254, 0.4) 0px, transparent 50%),
+    /* Sky-100 (Cool Air) */
+    radial-gradient(at 0% 100%, rgba(204, 251, 241, 0.3) 0px, transparent 50%);
+  /* Teal-50 (Mint) */
   background-attachment: fixed;
   background-size: 100% 100%;
 }

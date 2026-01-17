@@ -33,7 +33,7 @@ export default function PhotoTestimonials({ hideHeader = false }) {
 
         {/* Placeholder for Testimonials */}
         <div className="mt-8 sm:mt-12">
-          <FadeIn delay={0.2} className="rounded-3xl border border-slate-200 bg-white/60 backdrop-blur-md p-5 sm:p-8 shadow-2xl transition-all duration-500 hover:shadow-blue-900/10 hover:-translate-y-1">
+          <FadeIn delay={0.2} className="rounded-3xl border border-indigo-100 bg-white/80 backdrop-blur-2xl p-5 sm:p-8 shadow-2xl shadow-blue-900/10 transition-all duration-500 hover:shadow-blue-900/20 hover:-translate-y-1">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {/* Fake Photo 1 */}
               <div className="aspect-[4/5] rounded-2xl bg-white border-2 border-dashed border-slate-200 flex flex-col items-center justify-center p-4 transition-transform hover:scale-[1.02] duration-300">

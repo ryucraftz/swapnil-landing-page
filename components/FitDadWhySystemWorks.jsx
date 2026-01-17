@@ -111,7 +111,7 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
         <div className="mt-10 grid gap-6 lg:grid-cols-12 lg:items-start">
           {/* left */}
           <div className="lg:col-span-4">
-            <FadeIn delay={0.2} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl lg:sticky lg:top-6">
+            <FadeIn delay={0.2} className="rounded-3xl border border-indigo-100 bg-white p-6 shadow-xl shadow-blue-900/5 lg:sticky lg:top-6">
               <p className="text-sm font-extrabold text-slate-500 uppercase tracking-wider">
                 {data.listTitle}
               </p>

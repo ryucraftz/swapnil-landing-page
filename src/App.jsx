@@ -30,7 +30,7 @@ function App() {
 
         {/* CTA 1 */}
         <div className="flex justify-center py-6 sm:py-8">
-          <CallToActionButton text="Apply for IRON DAD CLUB™" />
+          <CallToActionButton text="Book Your 1:1 FitDad Transformation Call" />
         </div>
 
         {/* Social Proof */}
@@ -38,7 +38,7 @@ function App() {
 
         {/* CTA 2 */}
         <div className="flex justify-center py-6 sm:py-8">
-          <CallToActionButton text="Book Your Transformation Call" />
+          <CallToActionButton text="Book Your 1:1 FitDad Transformation Call" />
         </div>
 
         {/* What You Will Get */}
@@ -46,7 +46,7 @@ function App() {
 
         {/* CTA 3 (Existing) */}
         <div className="flex justify-center py-8">
-          <CallToActionButton text="Apply for IRON DAD CLUB™" />
+          <CallToActionButton text="Book Your 1:1 FitDad Transformation Call" />
         </div>
 
         {/* About */}
@@ -54,7 +54,7 @@ function App() {
 
         {/* CTA 4 */}
         <div className="flex justify-center py-6 sm:py-8">
-          <CallToActionButton text="Work with Coach Deepesh" />
+          <CallToActionButton text="Book Your 1:1 FitDad Transformation Call" />
         </div>
 
         {/* FAQS */}

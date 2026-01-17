@@ -4,7 +4,10 @@ export default function Hero() {
   return (
     <div className="relative min-h-0 md:min-h-[60vh] flex items-center justify-center overflow-hidden py-12 md:py-20">
 
-      {/* Decorative Blobs - Removed for Minimalist White Theme */}
+      {/* 🌟 Premium Aurora Background */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full mix-blend-multiply filter blur-[128px] animate-blob"></div>
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-[128px] animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-1/3 w-96 h-96 bg-teal-400/20 rounded-full mix-blend-multiply filter blur-[128px] animate-blob animation-delay-4000"></div>
 
       {/* 📱 Push down on mobile */}
       <motion.div
@@ -14,7 +17,7 @@ export default function Hero() {
         className="relative z-10 px-4 sm:px-6 text-center max-w-5xl mx-auto"
       >
         {/* Soft Text Backglow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-100/50 blur-[80px] -z-10 rounded-full mix-blend-multiply" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-white/40 blur-[80px] -z-10 rounded-full" />
 
         {/* Title */}
         <motion.h1
@@ -23,9 +26,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-extrabold leading-tight tracking-tight mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-6 drop-shadow-sm px-2 sm:px-0"
         >
-          Fix chronic <span className="text-blue-700 underline decoration-blue-400 decoration-4 underline-offset-4">joint and body pain at the root</span> so YOU can move, sit, walk, and sleep comfortably again
+          Fix chronic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-500 font-black">joint and body pain at the root</span> so YOU can move, sit, walk, and sleep comfortably again
           <br className="hidden md:block" />
-          without <span className="text-blue-600 font-bold italic">medication, surgery, or injury risk</span>
+          without <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 italic">medication, surgery, or injury risk</span>
         </motion.h1>
 
         {/* Subheading */}

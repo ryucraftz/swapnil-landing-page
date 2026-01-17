@@ -10,12 +10,12 @@ export default function PhotoTestimonials({ hideHeader = false }) {
         {/* Header */}
         {!hideHeader && (
           <FadeIn className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50/50 px-4 py-2 shadow-sm mb-6 max-[380px]:px-2">
-              <span className="h-2 w-2 rounded-full bg-blue-600 shadow-[0_0_10px_rgba(37,99,235,0.4)]" />
-              <p className="text-[10px] sm:text-xs md:text-sm font-extrabold tracking-[0.2em] uppercase text-blue-900">
+            <div className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50/50 px-4 py-2 shadow-sm mb-6 max-[380px]:px-2">
+              <span className="h-2 w-2 rounded-full bg-amber-500 shadow-[0_0_10px_rgba(245,158,11,0.4)]" />
+              <p className="text-[10px] sm:text-xs md:text-sm font-extrabold tracking-[0.2em] uppercase text-amber-900">
                 Social Proof
               </p>
-              <span className="h-2 w-2 rounded-full bg-blue-300 shadow-[0_0_10px_rgba(37,99,235,0.2)]" />
+              <span className="h-2 w-2 rounded-full bg-amber-300 shadow-[0_0_10px_rgba(245,158,11,0.2)]" />
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-slate-900 mb-6">
@@ -42,7 +42,7 @@ export default function PhotoTestimonials({ hideHeader = false }) {
               </div>
               {/* Fake Photo 2 */}
               <div className="aspect-[4/5] rounded-2xl bg-white border-2 border-dashed border-slate-200 flex flex-col items-center justify-center p-4 relative shadow-lg shadow-blue-500/10 transition-transform hover:scale-[1.02] duration-300">
-                <span className="absolute -top-3 bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full ring-1 ring-blue-600 shadow-md">AMAZING</span>
+                <span className="absolute -top-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full ring-1 ring-amber-400 shadow-md">AMAZING</span>
                 <span className="text-slate-200 font-bold text-4xl mb-2">?</span>
                 <p className="text-slate-400 text-xs text-center font-medium">Transformation #2</p>
               </div>

@@ -25,7 +25,7 @@ export default function MeetCoachSwapnil() {
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           {/* LEFT: Photo card */}
           <div className="lg:col-span-5">
-            <FadeIn delay={0.2} className="relative h-full rounded-3xl border border-slate-200 bg-white p-3 sm:p-4 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-900/5 hover:border-blue-100 group">
+            <FadeIn delay={0.2} className="relative h-full rounded-3xl border border-slate-200/60 bg-white/60 backdrop-blur-xl p-3 sm:p-4 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-900/10 hover:border-blue-200 group">
               <div className="relative overflow-hidden rounded-2xl border border-slate-100 bg-slate-50 h-[300px] sm:h-[400px] flex items-center justify-center transition-colors group-hover:bg-blue-50/30">
                 {/* Grid Pattern */}
                 <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:24px_24px]" />
@@ -34,8 +34,8 @@ export default function MeetCoachSwapnil() {
 
                 {/* Top tags */}
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur px-3 py-1.5 border border-slate-200 shadow-sm">
-                    <BadgeCheck className="h-4 w-4 text-blue-600" />
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur px-3 py-1.5 border border-slate-200 shadow-sm ring-1 ring-slate-100">
+                    <BadgeCheck className="h-4 w-4 text-amber-500" />
                     <span className="text-xs sm:text-sm font-semibold text-slate-800">
                       Certified Coach
                     </span>
@@ -85,7 +85,7 @@ export default function MeetCoachSwapnil() {
 
           {/* RIGHT: Story + Expertise */}
           <div className="lg:col-span-7">
-            <FadeIn delay={0.4} className="h-full rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-900/5 hover:border-blue-100 group">
+            <FadeIn delay={0.4} className="h-full rounded-3xl border border-slate-200/60 bg-white/60 backdrop-blur-xl p-6 sm:p-8 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-900/10 hover:border-blue-200 group">
               <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5 transition-colors group-hover:bg-blue-50/30 group-hover:border-blue-100">
                 <p className="text-sm font-bold tracking-[0.18em] uppercase text-slate-500 group-hover:text-blue-600 transition-colors">
                   The story

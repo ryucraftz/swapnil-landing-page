@@ -74,51 +74,48 @@ export default function FitDadTreeTimeline({ data = DEFAULT_DATA }) {
                     <div className="w-4 h-4 rounded-full bg-teal-500 ring-4 ring-white shadow-lg" />
                   </div>
 
-                  {/* LEFT SIDE CONTENT (Only if isLeft) */}
+                  {/* LEFT SIDE CONTENT (Desktop Only - Even Items) */}
                   <div className={`
-                    ${isLeft ? 'md:block' : 'md:hidden'}
-                    pl-12 md:pl-0 md:text-right
+                    hidden md:block
+                    pl-0 text-right
+                    ${isLeft ? 'opacity-100' : 'opacity-0 pointer-events-none'}
                   `}>
-                    <FadeIn delay={idx * 0.1}>
-                      <div className={`
-                            relative bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-teal-50/50 
-                            transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-900/10
-                            group-hover:border-teal-200
-                        `}>
-                        {/* Connector Line (Right side of card) */}
-                        <div className="hidden md:block absolute top-1/2 -right-12 h-[2px] w-12 bg-teal-100 -z-10" />
+                    {isLeft && (
+                      <FadeIn delay={idx * 0.1}>
+                        <div className={`
+                                relative bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-teal-50/50
+                                transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-900/10
+                                group-hover:border-teal-200
+                            `}>
+                          {/* Connector Line (Right side of card) */}
+                          <div className="absolute top-1/2 -right-12 h-[2px] w-12 bg-teal-100 -z-10" />
 
-                        <span className="text-5xl font-serif font-black text-teal-100/80 mb-2 block group-hover:text-amber-100 transition-colors">
-                          {n}
-                        </span>
-                        <h3 className="text-xl font-bold text-slate-900 mb-2 font-display">
-                          {item.title}
-                        </h3>
-                        <p className="text-slate-600 leading-relaxed text-base">
-                          {item.desc}
-                        </p>
-                      </div>
-                    </FadeIn>
+                          <span className="text-5xl font-serif font-black text-teal-100/80 mb-2 block group-hover:text-amber-100 transition-colors">
+                            {n}
+                          </span>
+                          <h3 className="text-xl font-bold text-slate-900 mb-2 font-display">
+                            {item.title}
+                          </h3>
+                          <p className="text-slate-600 leading-relaxed text-base">
+                            {item.desc}
+                          </p>
+                        </div>
+                      </FadeIn>
+                    )}
                   </div>
 
-                  {/* SPACER (If Right Side Item, we need an empty left col) */}
-                  {!isLeft && <div className="hidden md:block" />}
-
-                  {/* SPACER (If Left Side Item, we need an empty right col) */}
-                  {isLeft && <div className="hidden md:block" />}
-
-                  {/* RIGHT SIDE CONTENT (Only if !isLeft OR Mobile) */}
+                  {/* RIGHT SIDE CONTENT (Mobile: All Items | Desktop: Odd Items) */}
                   <div className={`
-                    ${!isLeft ? 'md:block' : 'md:hidden'}
                     pl-12 md:pl-0 md:text-left
+                    ${isLeft ? 'md:hidden' : 'block'}
                   `}>
                     <FadeIn delay={idx * 0.1}>
                       <div className={`
-                            relative bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-teal-50/50 
+                            relative bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-teal-50/50
                             transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-900/10
                             group-hover:border-teal-200
                         `}>
-                        {/* Connector Line (Left side of card) */}
+                        {/* Connector Line (Left side of card - Desktop Only) */}
                         <div className="hidden md:block absolute top-1/2 -left-12 h-[2px] w-12 bg-teal-100 -z-10" />
 
                         <span className="text-5xl font-serif font-black text-teal-100/80 mb-2 block group-hover:text-amber-100 transition-colors">

@@ -34,8 +34,8 @@ export default function PhotoTestimonials() {
 
         {/* Placeholder for Testimonials */}
         <div className="mt-8 sm:mt-12">
-          <FadeIn delay={0.2} className="rounded-3xl border border-slate-200 bg-white/40 backdrop-blur-xl p-8 shadow-2xl">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <FadeIn delay={0.2} className="rounded-3xl border border-slate-200 bg-white/40 backdrop-blur-xl p-5 sm:p-8 shadow-2xl">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {/* Fake Photo 1 */}
               <div className="aspect-[4/5] rounded-2xl bg-white border-2 border-dashed border-slate-200 flex flex-col items-center justify-center p-4">
                 <span className="text-slate-300 font-bold text-4xl mb-2">?</span>

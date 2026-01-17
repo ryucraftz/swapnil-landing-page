@@ -7,27 +7,27 @@ const StickyBar = () => {
   return (
     <div className="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-xl p-4 shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.1)] flex items-center justify-between border-t border-slate-200 lg:px-20 z-[1000] space-x-2 sm:space-x-6 active:bg-slate-50 transition-colors">
       {/* Left: Pricing */}
-      <div className="flex flex-col items-start min-w-[140px]">
-        <div className="flex items-baseline gap-2">
-          <span className="text-slate-400 text-lg sm:text-xl font-medium line-through decoration-slate-400 decoration-2">
+      <div className="flex flex-col items-start min-w-0 shrink-0">
+        <div className="flex items-baseline gap-1.5 sm:gap-2">
+          <span className="text-slate-400 text-base sm:text-xl font-medium line-through decoration-slate-400 decoration-2">
             ₹999
           </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-rose-600 text-2xl sm:text-3xl font-black drop-shadow-sm">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-rose-600 text-xl sm:text-3xl font-black drop-shadow-sm">
             FREE
           </span>
         </div>
-        <div className="text-xs sm:text-sm font-bold text-slate-500 uppercase tracking-wide">
+        <div className="text-[10px] sm:text-sm font-bold text-slate-500 uppercase tracking-wide truncate max-w-[120px] sm:max-w-none">
           Limited-time offer
         </div>
       </div>
 
       {/* Right: CTA */}
-      <div className="flex items-center flex-1 justify-end relative">
+      <div className="flex items-center justify-end relative ml-2 sm:ml-0">
         <a
           href={CALENDLY_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-bold text-sm sm:text-base md:text-lg rounded-full shadow-lg shadow-red-200/50 hover:shadow-red-500/30 transition-all duration-300 transform hover:-translate-y-0.5 px-6 sm:px-8 py-3 whitespace-normal text-center max-w-[200px] sm:max-w-[300px] cursor-pointer block border border-red-500/20 hover:border-red-400/50 no-underline"
+          className="bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-bold text-xs sm:text-base md:text-lg rounded-full shadow-lg shadow-red-200/50 hover:shadow-red-500/30 transition-all duration-300 transform hover:-translate-y-0.5 px-4 py-2.5 sm:px-8 sm:py-3 whitespace-normal text-center leading-tight max-w-[160px] sm:max-w-[300px] cursor-pointer block border border-red-500/20 hover:border-red-400/50 no-underline"
         >
           Book Your 1:1 FitDad Transformation Call
         </a>

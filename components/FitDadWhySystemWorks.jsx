@@ -140,7 +140,7 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
                 {/* spine */}
                 <div
                   aria-hidden="true"
-                  className="absolute left-[22px] top-0 h-full w-[2px] bg-gradient-to-b from-amber-500/50 via-slate-300 to-transparent"
+                  className="absolute left-[18px] sm:left-[22px] top-0 h-full w-[2px] bg-gradient-to-b from-amber-500/50 via-slate-300 to-transparent"
                 />
 
                 {items.map((item, idx) => {
@@ -149,9 +149,9 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
                   const isLast = idx === items.length - 1;
 
                   return (
-                    <li key={idx} className="relative pl-12 sm:pl-14">
+                    <li key={idx} className="relative pl-10 sm:pl-14">
                       {/* DOT moved OUTSIDE the card so it never overlaps on mobile */}
-                      <div className="absolute left-[22px] top-6 z-10 -translate-x-1/2">
+                      <div className="absolute left-[18px] sm:left-[22px] top-6 z-10 -translate-x-1/2">
                         <DotIcon />
                       </div>
 

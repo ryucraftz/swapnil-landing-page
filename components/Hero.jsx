@@ -10,7 +10,7 @@ export default function Hero() {
       {/* 📱 Push down on mobile */}
       <div className="relative z-10 px-4 sm:px-6 text-center max-w-5xl mx-auto">
         {/* Title */}
-        <h1 className="font-extrabold leading-tight tracking-tight mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-6 drop-shadow-sm">
+        <h1 className="font-extrabold leading-tight tracking-tight mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-6 drop-shadow-sm px-2 sm:px-0">
           Lose post-30 belly fat and <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600">feel fit, strong, and energetic again</span> as a father
         </h1>
 

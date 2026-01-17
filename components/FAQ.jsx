@@ -51,19 +51,19 @@ function FAQItem({ faq }) {
     <div className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? 'border-amber-500 shadow-[0_4px_15px_rgba(245,158,11,0.15)] ring-1 ring-amber-500/20' : 'border-slate-200'}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-center justify-between bg-white px-6 py-4 text-left transition-colors hover:bg-slate-50"
+        className="flex w-full items-center justify-between bg-white px-4 py-3 sm:px-6 sm:py-4 text-left transition-colors hover:bg-slate-50"
       >
-        <span className={`text-base font-semibold transition-colors ${isOpen ? 'text-amber-600' : 'text-slate-800'}`}>
+        <span className={`text-sm sm:text-base font-semibold transition-colors pr-4 ${isOpen ? 'text-amber-600' : 'text-slate-800'}`}>
           {faq.question}
         </span>
         {isOpen ? (
-          <Minus className="h-5 w-5 text-amber-600" />
+          <Minus className="h-4 w-4 sm:h-5 sm:w-5 text-amber-600 flex-shrink-0" />
         ) : (
-          <Plus className="h-5 w-5 text-slate-400" />
+          <Plus className="h-4 w-4 sm:h-5 sm:w-5 text-slate-400 flex-shrink-0" />
         )}
       </button>
       <div
-        className={`bg-slate-50 px-6 text-slate-600 transition-all duration-300 ease-in-out ${isOpen ? "max-h-40 py-4 opacity-100" : "max-h-0 py-0 opacity-0"
+        className={`bg-slate-50 px-4 sm:px-6 text-slate-600 text-sm sm:text-base transition-all duration-300 ease-in-out ${isOpen ? "max-h-40 py-3 sm:py-4 opacity-100" : "max-h-0 py-0 opacity-0"
           }`}
       >
         {faq.answer}

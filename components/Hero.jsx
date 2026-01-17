@@ -28,7 +28,7 @@ export default function Hero() {
         >
           Fix chronic <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-emerald-600 to-teal-500 font-black">joint and body pain at the root</span> so YOU can move, sit, walk, and sleep comfortably again
           <br className="hidden md:block" />
-          without <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 italic">medication, surgery, or injury risk</span>
+          without <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-500 italic">medication, surgery, or injury risk</span>
         </motion.h1>
 
         {/* Subheading */}

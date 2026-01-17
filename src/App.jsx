@@ -10,7 +10,7 @@ import PhotoTestimonials from "../components/PhotoTestimonials";
 import FitDadWhySystemWorks from "../components/FitDadWhySystemWorks";
 import FAQ from "../components/FAQ";
 import FinalCTA from "../components/FinalCTA";
-import FloatingNav from "../components/FloatingNav";
+import StickyBar from "../components/StickyBar";
 import ThankYou from "../components/ThankYou";
 import ThankYouStickyBar from "../components/ThankYouStickyBar";
 
@@ -77,7 +77,7 @@ function App() {
         <FinalCTA />
       </div>
 
-      <FloatingNav />
+      <StickyBar />
     </>
   );
 }

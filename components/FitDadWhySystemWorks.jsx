@@ -56,50 +56,80 @@ export default function FitDadTreeTimeline({ data = DEFAULT_DATA }) {
           {/* THE TRUNK (Central Line) */}
           <div className="absolute left-4 sm:left-1/2 top-4 bottom-0 w-[4px] bg-gradient-to-b from-teal-500 via-emerald-400 to-teal-100/20 rounded-full -translate-x-1/2 opacity-30 sm:opacity-50" />
 
-          <div className="space-y-12 sm:space-y-0">
+          <div className="space-y-12 sm:space-y-0 relative z-10">
             {data.items.map((item, idx) => {
               const n = String(idx + 1).padStart(2, "0");
-              const isEven = idx % 2 === 0;
+              const isLeft = idx % 2 === 0;
 
               return (
-                <div key={idx} className="relative sm:flex sm:items-center sm:justify-between group">
+                <div key={idx} className="relative md:grid md:grid-cols-2 md:items-center md:gap-12 group">
 
-                  {/* MOBILE & DESKTOP TRUNK DOT (The 'Node') */}
-                  <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 flex items-center justify-center w-8 h-8 z-20">
+                  {/* CENTRAL NODE (Desktop) */}
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center w-8 h-8 z-20">
                     <div className="w-4 h-4 rounded-full bg-teal-500 ring-4 ring-white shadow-lg group-hover:scale-125 group-hover:bg-amber-400 transition-all duration-500" />
                   </div>
 
-                  {/* Spacer for Even items on Desktop (pushes them right) */}
-                  <div className={`hidden sm:block sm:w-1/2 ${isEven ? 'order-1' : 'order-2'}`} />
+                  {/* MOBILE NODE (Left side) */}
+                  <div className="md:hidden absolute left-4 flex items-center justify-center w-8 h-8 z-20 -translate-x-1/2">
+                    <div className="w-4 h-4 rounded-full bg-teal-500 ring-4 ring-white shadow-lg" />
+                  </div>
 
-                  {/* THE BRANCH & CARD */}
+                  {/* LEFT SIDE CONTENT (Only if isLeft) */}
                   <div className={`
-                    relative pl-12 sm:pl-0 sm:w-1/2 
-                    ${isEven ? 'sm:pr-16 sm:text-right order-1' : 'sm:pl-16 sm:text-left order-2'}
+                    ${isLeft ? 'md:block' : 'md:hidden'}
+                    pl-12 md:pl-0 md:text-right
                   `}>
                     <FadeIn delay={idx * 0.1}>
                       <div className={`
-                            relative bg-white p-6 sm:p-8 rounded-3xl shadow-lg border border-teal-50/50 
+                            relative bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-teal-50/50 
                             transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-900/10
                             group-hover:border-teal-200
                         `}>
-                        {/* Branch Connector Line (Desktop Only visual) */}
-                        <div className={`
-                                hidden sm:block absolute top-1/2 -translate-y-1/2 h-[2px] w-16 bg-teal-100 -z-10
-                                ${isEven ? '-right-16' : '-left-16'}
-                            `} />
+                        {/* Connector Line (Right side of card) */}
+                        <div className="hidden md:block absolute top-1/2 -right-12 h-[2px] w-12 bg-teal-100 -z-10" />
 
-                        <div className={`flex flex-col ${isEven ? 'sm:items-end' : 'sm:items-start'}`}>
-                          <span className="text-5xl font-serif font-black text-slate-100 mb-2 group-hover:text-teal-50 transition-colors">
-                            {n}
-                          </span>
-                          <h3 className="text-xl font-bold text-slate-900 mb-2 font-display">
-                            {item.title}
-                          </h3>
-                          <p className="text-slate-600 leading-relaxed">
-                            {item.desc}
-                          </p>
-                        </div>
+                        <span className="text-5xl font-serif font-black text-teal-100/80 mb-2 block group-hover:text-amber-100 transition-colors">
+                          {n}
+                        </span>
+                        <h3 className="text-xl font-bold text-slate-900 mb-2 font-display">
+                          {item.title}
+                        </h3>
+                        <p className="text-slate-600 leading-relaxed text-base">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </FadeIn>
+                  </div>
+
+                  {/* SPACER (If Right Side Item, we need an empty left col) */}
+                  {!isLeft && <div className="hidden md:block" />}
+
+                  {/* SPACER (If Left Side Item, we need an empty right col) */}
+                  {isLeft && <div className="hidden md:block" />}
+
+                  {/* RIGHT SIDE CONTENT (Only if !isLeft OR Mobile) */}
+                  <div className={`
+                    ${!isLeft ? 'md:block' : 'md:hidden'}
+                    pl-12 md:pl-0 md:text-left
+                  `}>
+                    <FadeIn delay={idx * 0.1}>
+                      <div className={`
+                            relative bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-teal-50/50 
+                            transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-900/10
+                            group-hover:border-teal-200
+                        `}>
+                        {/* Connector Line (Left side of card) */}
+                        <div className="hidden md:block absolute top-1/2 -left-12 h-[2px] w-12 bg-teal-100 -z-10" />
+
+                        <span className="text-5xl font-serif font-black text-teal-100/80 mb-2 block group-hover:text-amber-100 transition-colors">
+                          {n}
+                        </span>
+                        <h3 className="text-xl font-bold text-slate-900 mb-2 font-display">
+                          {item.title}
+                        </h3>
+                        <p className="text-slate-600 leading-relaxed text-base">
+                          {item.desc}
+                        </p>
                       </div>
                     </FadeIn>
                   </div>

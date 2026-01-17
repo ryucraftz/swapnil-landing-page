@@ -28,7 +28,7 @@ export default function MeetCoachDeepesh() {
           {/* LEFT: Photo card */}
           <div className="lg:col-span-5">
             <FadeIn delay={0.2} className="relative h-full rounded-3xl border border-slate-200 bg-white/70 p-3 sm:p-4 shadow-2xl backdrop-blur-xl">
-              <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 h-[400px] flex items-center justify-center">
+              <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 h-[300px] sm:h-[400px] flex items-center justify-center">
                 {/* Grid Pattern */}
                 <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#00000012_1px,transparent_1px),linear-gradient(to_bottom,#00000012_1px,transparent_1px)] bg-[size:24px_24px]" />
 
@@ -64,7 +64,7 @@ export default function MeetCoachDeepesh() {
 
                 {/* stats */}
                 <div className="mt-4">
-                  <div className="grid grid-cols-2 gap-2 rounded-2xl bg-slate-50/50 backdrop-blur border border-slate-100 p-3 shadow-inner text-left">
+                  <div className="grid grid-cols-2 gap-2 rounded-2xl bg-slate-50/50 backdrop-blur border border-slate-100 p-2 sm:p-3 shadow-inner text-left">
                     <MiniStatOverlay
                       icon={<Users className="h-4 w-4" />}
                       label="1200+ Transformations"
@@ -145,9 +145,9 @@ export default function MeetCoachDeepesh() {
 
 function MiniStatOverlay({ icon, label }) {
   return (
-    <div className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white/60 px-2.5 py-2 hover:bg-white transition-colors shadow-sm">
-      <span className="text-amber-500">{icon}</span>
-      <span className="text-xs font-semibold text-slate-700 leading-snug">
+    <div className="flex items-center gap-1.5 sm:gap-2 rounded-xl border border-slate-200 bg-white/60 px-2 py-1.5 sm:px-2.5 sm:py-2 hover:bg-white transition-colors shadow-sm">
+      <span className="text-amber-500 shrink-0">{icon}</span>
+      <span className="text-[10px] sm:text-xs font-semibold text-slate-700 leading-snug">
         {label}
       </span>
     </div>

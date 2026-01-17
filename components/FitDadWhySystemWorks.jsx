@@ -7,7 +7,7 @@ const DEFAULT_DATA = {
   headingBottom: "",
   sub1: "A complete system to fix chronic pain at the root.",
   sub2: "",
-  listTitle: "Inside The Pain Reset 90™, You Get:",
+  listTitle: "Inside The Pain Reset 90™",
   items: [
     {
       title: "1:1 Root-Cause Assessment",
@@ -34,15 +34,12 @@ const DEFAULT_DATA = {
     "Built for entrepreneurs and professionals who need results without the risk.",
 };
 
-function DotIcon() {
+function DotIcon({ active }) {
   return (
-    <span
-      className="relative inline-flex h-6 w-6 items-center justify-center"
-      aria-hidden="true"
-    >
-      <span className="absolute inset-0 rounded-full bg-teal-100 blur-[2px]" />
-      <span className="h-3 w-3 rounded-full bg-teal-600 ring-4 ring-teal-50" />
-    </span>
+    <div className="relative flex items-center justify-center">
+      <div className={`absolute inset-0 rounded-full bg-teal-400 opacity-20 blur-md transition-all duration-500 ${active ? "scale-150 opacity-40" : "scale-100"}`} />
+      <span className={`relative inline-flex h-4 w-4 rounded-full ring-2 ring-white transition-all duration-500 ${active ? "bg-amber-400 scale-125" : "bg-teal-200"}`} />
+    </div>
   );
 }
 
@@ -88,95 +85,101 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
   }, [items]);
 
   return (
-    <section className="relative w-full overflow-hidden bg-transparent">
-      {/* background - Removed blobs */}
+    <section className="relative w-full overflow-hidden py-16 sm:py-24">
+      {/* Dynamic Background Elements */}
+      <div className="absolute top-1/4 left-0 w-full h-[500px] bg-gradient-to-b from-teal-50/0 via-teal-50/50 to-teal-50/0 -z-10" />
 
-      <div className="relative mx-auto max-w-6xl px-4 py-12 sm:py-16">
-        {/* header */}
-        <FadeIn className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
-            <span className="block">{data.headingTop}</span>
-            <span className="block text-slate-800">{data.headingBottom}</span>
+      <div className="relative mx-auto max-w-6xl px-4">
+        {/* Header */}
+        <FadeIn className="mx-auto max-w-3xl text-center mb-16">
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 font-headings">
+            {data.headingTop}
           </h2>
-
-          <p className="mt-4 text-base font-semibold text-slate-700 sm:text-lg">
+          <p className="text-lg sm:text-xl font-medium text-slate-600 max-w-2xl mx-auto">
             {data.sub1}
-          </p>
-          <p className="mt-2 text-base leading-relaxed text-slate-600">
-            {data.sub2}
           </p>
         </FadeIn>
 
-        {/* content */}
-        <div className="mt-10 grid gap-6 lg:grid-cols-12 lg:items-start">
-          {/* left */}
-          <div className="lg:col-span-4">
-            <FadeIn delay={0.2} className="rounded-3xl border border-teal-100 bg-white p-6 shadow-xl shadow-teal-900/5 lg:sticky lg:top-6">
-              <p className="text-sm font-extrabold text-slate-500 uppercase tracking-wider">
-                {data.listTitle}
-              </p>
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
 
-              <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                <p className="text-sm leading-relaxed text-slate-500 italic">
-                  {data.footer}
+          {/* Sticky Summary Card (Left) */}
+          <div className="lg:col-span-4 lg:sticky lg:top-8">
+            <FadeIn>
+              <div className="rounded-3xl bg-slate-900 text-white p-8 shadow-2xl shadow-slate-900/20 relative overflow-hidden group">
+                {/* Abstract Shapes */}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/20 rounded-full blur-3xl -mr-10 -mt-10 group-hover:bg-teal-500/30 transition-colors duration-700" />
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-amber-500/20 rounded-full blur-3xl -ml-10 -mb-10 group-hover:bg-amber-500/30 transition-colors duration-700" />
+
+                <h3 className="text-xl font-bold uppercase tracking-wider mb-2 font-display">
+                  The System
+                </h3>
+                <div className="h-1 w-12 bg-teal-500 rounded-full mb-6" />
+
+                <p className="text-3xl font-serif font-medium leading-tight mb-8 text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-emerald-100">
+                  {data.listTitle}
+                </p>
+
+                <p className="text-slate-400 text-sm leading-relaxed border-t border-slate-700 pt-6 italic">
+                  "{data.footer}"
                 </p>
               </div>
             </FadeIn>
           </div>
 
-          {/* right: timeline */}
-          <div className="lg:col-span-8">
-            <FadeIn delay={0.4} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
-              <ol className="relative">
-                {/* spine */}
-                <div
-                  aria-hidden="true"
-                  className="absolute left-[18px] sm:left-[22px] top-0 h-full w-[2px] bg-teal-100"
-                />
+          {/* Timeline (Right) */}
+          <div className="lg:col-span-8 relative">
+            {/* The Spine */}
+            <div className="absolute left-[19px] sm:left-[27px] top-4 bottom-12 w-[3px] bg-gradient-to-b from-teal-500 via-emerald-400 to-transparent rounded-full opacity-30" />
 
-                {items.map((item, idx) => {
-                  const n = String(idx + 1).padStart(2, "0");
-                  const show = visible[idx];
-                  const isLast = idx === items.length - 1;
+            <div className="space-y-8 sm:space-y-12">
+              {items.map((item, idx) => {
+                const n = String(idx + 1).padStart(2, "0");
+                const show = visible[idx];
 
-                  return (
-                    <li key={idx} className="relative pl-10 sm:pl-14">
-                      {/* DOT moved OUTSIDE the card so it never overlaps on mobile */}
-                      <div className="absolute left-[18px] sm:left-[22px] top-6 z-10 -translate-x-1/2">
-                        <DotIcon />
-                      </div>
+                return (
+                  <div
+                    key={idx}
+                    ref={(el) => (itemRefs.current[idx] = el)}
+                    data-idx={idx}
+                    className="relative pl-12 sm:pl-20"
+                  >
+                    {/* Node */}
+                    <div className="absolute left-0 sm:left-2 top-0 sm:top-2 w-10 sm:w-14 flex justify-center z-10">
+                      <DotIcon active={show} />
+                    </div>
 
-                      <div
-                        ref={(el) => (itemRefs.current[idx] = el)}
-                        data-idx={idx}
-                        className={[
-                          "relative z-20 flex items-start gap-3 sm:gap-4 rounded-2xl border border-slate-200 bg-white p-3 sm:p-4 shadow-md",
-                          "transition-all duration-700 ease-out will-change-transform",
-                          "hover:-translate-y-1 hover:border-amber-500/30 hover:shadow-amber-500/10 hover:bg-slate-50",
-                          show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5",
-                        ].join(" ")}
-                      >
-                        <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-slate-100 to-white text-sm font-extrabold text-amber-600 shadow-sm border border-slate-200">
-                          {n}
+                    {/* Card */}
+                    <div className={`
+                        relative group rounded-2xl p-6 sm:p-8 
+                        bg-white/60 backdrop-blur-md border border-white/50 shadow-lg shadow-teal-900/5
+                        transition-all duration-700 ease-out
+                        hover:bg-white hover:shadow-xl hover:shadow-teal-900/10 hover:border-teal-200/50 hover:-translate-y-1
+                        ${show ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}
+                    `}>
+                      <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 sm:items-center">
+                        {/* Number Badge */}
+                        <div className="flex-shrink-0">
+                          <span className="text-4xl sm:text-5xl font-black text-slate-100 group-hover:text-teal-50 transition-colors font-serif">
+                            {n}
+                          </span>
                         </div>
 
-                        <div className="min-w-0">
-                          <p className="text-sm font-bold text-slate-900 sm:text-base">
+                        {/* Content */}
+                        <div>
+                          <h4 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 font-display">
                             {item.title}
+                          </h4>
+                          <p className="text-slate-600 text-base sm:text-lg leading-relaxed group-hover:text-slate-700">
+                            <span className="text-amber-500 font-bold mr-2">→</span>
+                            {item.desc}
                           </p>
-                          <div className="mt-1 flex items-start gap-1 text-sm text-slate-600">
-                            <span className="text-amber-600 font-bold">→</span>
-                            <span>{item.desc}</span>
-                          </div>
                         </div>
                       </div>
-
-                      {!isLast && <div className="h-3 sm:h-6" />}
-                    </li>
-                  );
-                })}
-              </ol>
-            </FadeIn>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

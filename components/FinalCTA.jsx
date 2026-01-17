@@ -6,7 +6,8 @@ export default function FinalCTA() {
     return (
         <section className="bg-slate-950 py-20 px-4 relative overflow-hidden">
             {/* Glows */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl bg-gradient-to-b from-blue-900/10 to-transparent pointer-events-none" />
+            {/* Glows */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/30 via-slate-950/0 to-transparent pointer-events-none" />
 
             <div className="max-w-4xl mx-auto text-center relative z-10">
                 <FadeIn>

@@ -30,7 +30,10 @@ export default function MeetCoachDeepesh() {
           <div className="lg:col-span-5">
             <FadeIn delay={0.2} className="relative h-full rounded-3xl border border-slate-800 bg-slate-900/60 p-3 sm:p-4 shadow-2xl backdrop-blur-xl">
               <div className="relative overflow-hidden rounded-2xl border border-slate-700/50 bg-slate-800 h-[400px] flex items-center justify-center">
-                <p className="text-slate-600 font-semibold">Coach Photo Placeholder</p>
+                {/* Grid Pattern */}
+                <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+
+                <p className="text-slate-500 font-medium relative z-10">Coach Photo Placeholder</p>
 
                 {/* Top tags */}
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between">

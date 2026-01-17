@@ -1,7 +1,7 @@
 import React from "react";
 import FadeIn from "./FadeIn";
 
-export default function PhotoTestimonials() {
+export default function PhotoTestimonials({ hideHeader = false }) {
   return (
     <section className="relative bg-transparent py-10 sm:py-16 overflow-hidden">
       {/* background accents */}
@@ -10,27 +10,29 @@ export default function PhotoTestimonials() {
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
         {/* Header */}
-        <FadeIn className="text-center max-w-4xl mx-auto">
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 backdrop-blur px-4 py-2 shadow-sm mb-6 max-[380px]:px-2">
-            <span className="h-2 w-2 rounded-full bg-amber-500 shadow-[0_0_10px_#f59e0b]" />
-            <p className="text-[10px] sm:text-xs md:text-sm font-extrabold tracking-[0.2em] uppercase text-slate-600">
-              Social Proof
+        {!hideHeader && (
+          <FadeIn className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 backdrop-blur px-4 py-2 shadow-sm mb-6 max-[380px]:px-2">
+              <span className="h-2 w-2 rounded-full bg-amber-500 shadow-[0_0_10px_#f59e0b]" />
+              <p className="text-[10px] sm:text-xs md:text-sm font-extrabold tracking-[0.2em] uppercase text-slate-600">
+                Social Proof
+              </p>
+              <span className="h-2 w-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" />
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-slate-900 mb-6">
+              Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">working fathers</span>
+              <br />
+              who were <span className="text-slate-500">tired, overweight, and inconsistent</span>
+            </h2>
+
+            <p className="mt-6 text-lg sm:text-xl font-medium text-slate-600 leading-relaxed max-w-3xl mx-auto">
+              and <span className="text-amber-600 font-bold">lost significant fat, regained energy, and built strength</span>{" "}
+              <span className="hidden sm:inline"> </span>
+              without crash dieting or long gym sessions.
             </p>
-            <span className="h-2 w-2 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" />
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-slate-900 mb-6">
-            Trusted by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">working fathers</span>
-            <br />
-            who were <span className="text-slate-500">tired, overweight, and inconsistent</span>
-          </h2>
-
-          <p className="mt-6 text-lg sm:text-xl font-medium text-slate-600 leading-relaxed max-w-3xl mx-auto">
-            and <span className="text-amber-600 font-bold">lost significant fat, regained energy, and built strength</span>{" "}
-            <span className="hidden sm:inline"> </span>
-            without crash dieting or long gym sessions.
-          </p>
-        </FadeIn>
+          </FadeIn>
+        )}
 
         {/* Placeholder for Testimonials */}
         <div className="mt-8 sm:mt-12">

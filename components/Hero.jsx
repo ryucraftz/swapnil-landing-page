@@ -40,16 +40,18 @@ export default function Hero() {
               <span className="text-xs font-medium text-slate-500">400+ Transformations</span>
             </div>
 
-            <h1 className="font-headings font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] text-slate-900 mb-6 tracking-tight">
+            <h1 className="font-headings font-extrabold text-5xl sm:text-6xl lg:text-[4.5rem] leading-[1.1] text-slate-900 mb-8 tracking-tight">
               Fix chronic <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-emerald-600 to-teal-500 relative inline-block">
-                joint and body pain at the root
+                joint and body pain
                 {/* Creative Underline */}
                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-teal-200/50 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
                 </svg>
-              </span> so YOU can move, sit, walk, and sleep comfortably again
+              </span>
+              <br className="hidden lg:block" />
+              at the <span className="italic font-serif font-medium text-slate-700">root</span> so YOU can move, sit, walk, and sleep comfortably again
               <br className="hidden lg:block my-2" />
-              without <span className="italic font-serif text-amber-600 font-medium">medication, surgery, or injury risk</span>
+              without <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-500 italic font-serif">medication, surgery, or injury risk</span>
             </h1>
 
             <p className="text-lg sm:text-lg text-slate-600 leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0 font-sans">

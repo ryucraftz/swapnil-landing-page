@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+:root {
+  font-family: 'Satoshi', sans-serif;
+  background-color: #f8fafc; /* Slate-50 fallback */
+}
+
+::selection {
+  background-color: #0ea5e9; /* Sky-500 */
+  color: white;
+}
+
+body {
+  /* Subtle mesh gradient background */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(168, 85, 247, 0.1) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
 
 /* Cross Line Animation */
 @keyframes cross-line {
@@ -29,4 +49,5 @@
   );
   transform: skewX(-20deg);
   animation: cross-line 1.5s linear infinite;
+  opacity: 0.8;
 }

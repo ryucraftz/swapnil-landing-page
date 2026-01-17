@@ -21,22 +21,24 @@ const AnimatedNumber = ({ value, duration = 2 }) => {
 
 const Review = () => {
   return (
-    <div className="w-full flex justify-center bg-white py-5">
-      <div className="flex items-center gap-2 px-3 py-2 rounded-full shadow-md">
-        <div className="flex items-center gap-1 text-sm text-black">
-          <Star
-            className="text-yellow-400 fill-yellow-400"
-            size={16}
-            strokeWidth={2.2}
-          />
+    <div className="w-full flex justify-center py-6">
+      <div className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/70 backdrop-blur-md border border-white/40 shadow-xl shadow-indigo-500/10 hover:shadow-indigo-500/20 transition-all duration-300 transform hover:-translate-y-1">
+        <div className="flex items-center gap-2 text-sm sm:text-base text-slate-800">
+          <div className="bg-yellow-100 p-1.5 rounded-full">
+            <Star
+              className="text-yellow-500 fill-yellow-500"
+              size={18}
+              strokeWidth={2.5}
+            />
+          </div>
 
           {/* Text + Animated 400 */}
-          <span className="font-medium">ISSA Certified Coach</span>
+          <span className="font-bold tracking-tight">ISSA Certified Coach</span>
 
-          <span className="mx-1">•</span>
+          <span className="mx-2 text-slate-300">|</span>
 
-          <span>
-            <AnimatedNumber value={400} /> Transformations
+          <span className="font-medium">
+            <span className="font-bold text-indigo-600"><AnimatedNumber value={400} /></span> Transformations
           </span>
         </div>
       </div>

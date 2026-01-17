@@ -45,18 +45,18 @@ const StickyBar = () => {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-white p-4 shadow-lg flex items-center justify-between border-t border-gray-200 lg:px-20 z-[1000] space-x-2 sm:space-x-6">
+    <div className="fixed bottom-0 left-0 w-full bg-white/80 backdrop-blur-xl p-4 shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.1)] flex items-center justify-between border-t border-white/50 lg:px-20 z-[1000] space-x-2 sm:space-x-6 active:bg-white/90 transition-colors">
       {/* Left: Pricing */}
       <div className="flex flex-col items-start min-w-[140px]">
         <div className="flex items-baseline gap-2">
-          <span className="text-gray-500 text-lg sm:text-xl font-semibold line-through">
+          <span className="text-gray-400 text-lg sm:text-xl font-medium line-through decoration-red-400 decoration-2">
             ₹199
           </span>
-          <span className="text-red-600 text-2xl sm:text-3xl font-extrabold">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-rose-600 text-2xl sm:text-3xl font-black">
             ₹9/-
           </span>
         </div>
-        <div className="text-xs sm:text-sm font-semibold text-gray-600">
+        <div className="text-xs sm:text-sm font-bold text-slate-500 uppercase tracking-wide">
           Limited-time offer
         </div>
       </div>
@@ -66,7 +66,7 @@ const StickyBar = () => {
         <button
           onClick={handlePayment}
           disabled={!isLoaded}
-          className="bg-red-600 text-white font-semibold text-sm sm:text-base md:text-lg rounded-3xl shadow-lg transition transform px-4 sm:px-6 py-2 sm:py-3 whitespace-normal text-center max-w-[200px] sm:max-w-[300px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed h-full"
+          className="bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-bold text-sm sm:text-base md:text-lg rounded-full shadow-lg hover:shadow-red-500/30 transition-all duration-300 transform hover:-translate-y-0.5 px-6 sm:px-8 py-3 whitespace-normal text-center max-w-[200px] sm:max-w-[300px] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed h-full border border-transparent hover:border-red-400/50"
         >
           Book Your 1:1 FitDad Transformation Call
         </button>

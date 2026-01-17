@@ -40,8 +40,8 @@ function DotIcon() {
       className="relative inline-flex h-6 w-6 items-center justify-center"
       aria-hidden="true"
     >
-      <span className="absolute inset-0 rounded-full bg-blue-100 blur-[2px]" />
-      <span className="h-3 w-3 rounded-full bg-blue-600 ring-4 ring-blue-50" />
+      <span className="absolute inset-0 rounded-full bg-teal-100 blur-[2px]" />
+      <span className="h-3 w-3 rounded-full bg-teal-600 ring-4 ring-teal-50" />
     </span>
   );
 }
@@ -111,7 +111,7 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
         <div className="mt-10 grid gap-6 lg:grid-cols-12 lg:items-start">
           {/* left */}
           <div className="lg:col-span-4">
-            <FadeIn delay={0.2} className="rounded-3xl border border-indigo-100 bg-white p-6 shadow-xl shadow-blue-900/5 lg:sticky lg:top-6">
+            <FadeIn delay={0.2} className="rounded-3xl border border-teal-100 bg-white p-6 shadow-xl shadow-teal-900/5 lg:sticky lg:top-6">
               <p className="text-sm font-extrabold text-slate-500 uppercase tracking-wider">
                 {data.listTitle}
               </p>
@@ -131,7 +131,7 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
                 {/* spine */}
                 <div
                   aria-hidden="true"
-                  className="absolute left-[18px] sm:left-[22px] top-0 h-full w-[2px] bg-blue-100"
+                  className="absolute left-[18px] sm:left-[22px] top-0 h-full w-[2px] bg-teal-100"
                 />
 
                 {items.map((item, idx) => {

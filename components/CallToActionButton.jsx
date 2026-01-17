@@ -18,8 +18,8 @@ export default function CallToActionButton(props) {
         className="
           relative inline-flex w-full sm:max-w-md
           items-center justify-center text-center overflow-hidden group
-          rounded-full bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold tracking-wide
-          shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_35px_rgba(37,99,235,0.6)] hover:scale-105
+          rounded-full bg-gradient-to-r from-teal-600 to-emerald-600 text-white font-bold tracking-wide
+          shadow-[0_0_20px_rgba(20,184,166,0.4)] hover:shadow-[0_0_35px_rgba(20,184,166,0.6)] hover:scale-105
           px-8 sm:px-12 py-4 sm:py-5
           text-sm sm:text-base md:text-lg
           whitespace-nowrap

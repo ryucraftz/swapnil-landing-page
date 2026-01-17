@@ -22,14 +22,14 @@ body {
   background-color: #f8fafc;
   /* Premium Light Base */
   background-image:
-    radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.25) 0px, transparent 50%),
-    /* Royal Blue (Increased Opacity) */
-    radial-gradient(at 100% 0%, rgba(147, 51, 234, 0.25) 0px, transparent 50%),
-    /* Purple (Increased Opacity) */
-    radial-gradient(at 100% 100%, rgba(20, 184, 166, 0.20) 0px, transparent 50%),
-    /* Teal (Increased Opacity) */
-    radial-gradient(at 0% 100%, rgba(245, 158, 11, 0.15) 0px, transparent 50%);
-  /* Gold/Amber (Increased Opacity) */
+    radial-gradient(at 0% 0%, rgba(20, 184, 166, 0.25) 0px, transparent 50%),
+    /* Teal-500 (Primary) */
+    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.20) 0px, transparent 50%),
+    /* Indigo-500 (Depth) */
+    radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.20) 0px, transparent 50%),
+    /* Emerald-500 (Healing) */
+    radial-gradient(at 0% 100%, rgba(45, 212, 191, 0.15) 0px, transparent 50%);
+  /* Teal-400 (Minty Light) */
   background-attachment: fixed;
   background-size: 100% 100%;
 }

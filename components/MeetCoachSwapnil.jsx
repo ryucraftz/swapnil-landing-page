@@ -11,7 +11,7 @@ export default function MeetCoachSwapnil() {
         {/* Header */}
         <FadeIn className="text-center max-w-3xl mx-auto">
           <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-slate-900 mb-4">
-            Meet Your Coach <span className="text-slate-900 underline decoration-blue-500 underline-offset-4">Swapnil</span>
+            Meet Your Coach <span className="text-slate-900 underline decoration-teal-500 underline-offset-4">Swapnil</span>
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-600">

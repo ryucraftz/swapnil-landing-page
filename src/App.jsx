@@ -11,9 +11,6 @@ import PhotoTestimonials from "../components/PhotoTestimonials";
 import FitDadWhySystemWorks from "../components/FitDadWhySystemWorks";
 // import OurPromise from "../components/OurPromise"; // Removed as not in request
 import FAQ from "../components/FAQ";
-import FinalCTA from "../components/FinalCTA";
-
-import SmoothScroll from "../components/SmoothScroll";
 import StickyBar from "../components/StickyBar";
 
 function App() {
@@ -21,7 +18,6 @@ function App() {
 
   return (
     <>
-      <SmoothScroll />
       <div className="pb-28 sm:pb-32">
         <Review />
         <Hero />

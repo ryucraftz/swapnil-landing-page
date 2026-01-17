@@ -12,14 +12,14 @@ export default function FinalCTA() {
             <div className="max-w-4xl mx-auto text-center relative z-10">
                 <FadeIn>
                     <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 leading-tight">
-                        You don’t need another short burst of motivation.
+                        You don’t need another short burst of motivation.{" "}
                         <br className="hidden sm:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-yellow-500">You need a system that fits your life as a father.</span>
                     </h2>
                     <p className="text-slate-400 text-lg sm:text-xl mb-10 leading-relaxed">
-                        If you’re ready to lose belly fat, regain energy,
+                        If you’re ready to lose belly fat, regain energy,{" "}
                         <br className="hidden sm:block" />
-                        and become a stronger role model for your kids,
+                        and become a stronger role model for your kids,{" "}
                         <br className="hidden sm:block" />
                         apply for IRON DAD CLUB™.
                     </p>

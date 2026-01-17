@@ -27,7 +27,7 @@ export default function PhotoTestimonials() {
           </h2>
 
           <p className="mt-6 text-lg sm:text-xl font-medium text-slate-300 leading-relaxed max-w-3xl mx-auto">
-            and <span className="text-amber-400 font-bold">lost significant fat, regained energy, and built strength</span>
+            and <span className="text-amber-400 font-bold">lost significant fat, regained energy, and built strength</span>{" "}
             <span className="hidden sm:inline"> </span>
             without crash dieting or long gym sessions.
           </p>

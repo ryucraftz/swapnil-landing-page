@@ -16,7 +16,7 @@ export default function Hero() {
 
         {/* Subheading */}
         <h2 className="my-6 text-lg sm:text-xl md:text-2xl font-medium text-slate-400 leading-relaxed max-w-3xl mx-auto">
-          Built for <span className="font-bold text-slate-100">working fathers</span> who want real fat loss and strength
+          Built for <span className="font-bold text-slate-100">working fathers</span> who want real fat loss and strength{" "}
           <span className="hidden sm:inline"> </span>
           without crash dieting, long workouts, or giving up family meals.
         </h2>

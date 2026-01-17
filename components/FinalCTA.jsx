@@ -1,25 +1,31 @@
 import React from "react";
 import CallToActionButton from "./CallToActionButton";
+import FadeIn from "./FadeIn";
 
 export default function FinalCTA() {
     return (
-        <section className="bg-slate-900 py-16 px-4">
-            <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-white text-3xl sm:text-4xl font-extrabold mb-6 leading-tight">
-                    You don’t need another short burst of motivation.
-                    <br className="hidden sm:block" />
-                    <span className="text-sky-400">You need a system that fits your life as a father.</span>
-                </h2>
-                <p className="text-slate-300 text-lg sm:text-xl mb-8 leading-relaxed">
-                    If you’re ready to lose belly fat, regain energy,
-                    <br className="hidden sm:block" />
-                    and become a stronger role model for your kids,
-                    <br className="hidden sm:block" />
-                    apply for IRON DAD CLUB™.
-                </p>
-                <div className="flex justify-center">
-                    <CallToActionButton text="Apply Now" />
-                </div>
+        <section className="bg-slate-950 py-20 px-4 relative overflow-hidden">
+            {/* Glows */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl bg-gradient-to-b from-blue-900/10 to-transparent pointer-events-none" />
+
+            <div className="max-w-4xl mx-auto text-center relative z-10">
+                <FadeIn>
+                    <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 leading-tight">
+                        You don’t need another short burst of motivation.
+                        <br className="hidden sm:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-yellow-500">You need a system that fits your life as a father.</span>
+                    </h2>
+                    <p className="text-slate-400 text-lg sm:text-xl mb-10 leading-relaxed">
+                        If you’re ready to lose belly fat, regain energy,
+                        <br className="hidden sm:block" />
+                        and become a stronger role model for your kids,
+                        <br className="hidden sm:block" />
+                        apply for IRON DAD CLUB™.
+                    </p>
+                    <div className="flex justify-center">
+                        <CallToActionButton text="Apply Now" />
+                    </div>
+                </FadeIn>
             </div>
         </section>
     );

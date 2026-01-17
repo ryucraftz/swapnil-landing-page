@@ -1,6 +1,6 @@
 // FitDadTimelineBlueprint.jsx
 import React, { useEffect, useRef, useState } from "react";
-
+import FadeIn from "./FadeIn";
 
 const DEFAULT_DATA = {
   headingTop: "WHAT YOU WILL GET",
@@ -44,8 +44,8 @@ function DotIcon() {
       className="relative inline-flex h-6 w-6 items-center justify-center"
       aria-hidden="true"
     >
-      <span className="absolute inset-0 rounded-full bg-blue-600/20 blur-[1px]" />
-      <span className="h-3 w-3 rounded-full bg-blue-600 ring-4 ring-blue-50" />
+      <span className="absolute inset-0 rounded-full bg-amber-500/20 blur-[2px]" />
+      <span className="h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-500/20" />
     </span>
   );
 }
@@ -92,56 +92,55 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
   }, [items]);
 
   return (
-    <section className="relative w-full overflow-hidden bg-white">
+    <section className="relative w-full overflow-hidden bg-transparent">
       {/* background */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-blue-200/40 blur-3xl" />
-        <div className="absolute top-24 -right-24 h-96 w-96 rounded-full bg-sky-200/35 blur-3xl" />
-        <div className="absolute bottom-[-160px] left-1/3 h-[520px] w-[520px] rounded-full bg-blue-100/60 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(59,130,246,0.11)_1px,transparent_0)] [background-size:18px_18px]" />
+        <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-blue-600/10 blur-[100px]" />
+        <div className="absolute top-24 -right-24 h-96 w-96 rounded-full bg-amber-600/10 blur-[100px]" />
+        <div className="absolute bottom-[-160px] left-1/3 h-[520px] w-[520px] rounded-full bg-indigo-600/5 blur-[120px]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl px-4 py-12 sm:py-16">
         {/* header */}
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+        <FadeIn className="mx-auto max-w-3xl text-center">
+          <h2 className="text-2xl font-extrabold tracking-tight text-white sm:text-4xl">
             <span className="block">{data.headingTop}</span>
-            <span className="block text-blue-700">{data.headingBottom}</span>
+            <span className="block text-amber-500">{data.headingBottom}</span>
           </h2>
 
-          <p className="mt-4 text-base font-semibold text-slate-900 sm:text-lg">
+          <p className="mt-4 text-base font-semibold text-slate-200 sm:text-lg">
             {data.sub1}
           </p>
-          <p className="mt-2 text-base leading-relaxed text-slate-600">
+          <p className="mt-2 text-base leading-relaxed text-slate-400">
             {data.sub2}
           </p>
-        </div>
+        </FadeIn>
 
         {/* content */}
         <div className="mt-10 grid gap-6 lg:grid-cols-12 lg:items-start">
           {/* left */}
           <div className="lg:col-span-4">
-            <div className="rounded-3xl border border-blue-100 bg-white/70 p-6 shadow-sm backdrop-blur lg:sticky lg:top-6">
-              <p className="text-sm font-extrabold text-slate-900">
+            <FadeIn delay={0.2} className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 shadow-2xl backdrop-blur-xl lg:sticky lg:top-6">
+              <p className="text-sm font-extrabold text-slate-300 uppercase tracking-wider">
                 {data.listTitle}
               </p>
 
-              <div className="mt-5 rounded-2xl border border-blue-100 bg-gradient-to-b from-blue-50 to-white p-4">
-                <p className="text-sm leading-relaxed text-slate-700">
+              <div className="mt-5 rounded-2xl border border-slate-700/50 bg-gradient-to-b from-slate-800 to-slate-900/50 p-4">
+                <p className="text-sm leading-relaxed text-slate-400 italic">
                   {data.footer}
                 </p>
               </div>
-            </div>
+            </FadeIn>
           </div>
 
           {/* right: timeline */}
           <div className="lg:col-span-8">
-            <div className="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm backdrop-blur">
+            <FadeIn delay={0.4} className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6 shadow-xl backdrop-blur-md">
               <ol className="relative">
                 {/* spine */}
                 <div
                   aria-hidden="true"
-                  className="absolute left-[22px] top-0 h-full w-[2px] bg-gradient-to-b from-blue-200 via-slate-200 to-transparent"
+                  className="absolute left-[22px] top-0 h-full w-[2px] bg-gradient-to-b from-amber-500/50 via-slate-700 to-transparent"
                 />
 
                 {items.map((item, idx) => {
@@ -160,33 +159,33 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
                         ref={(el) => (itemRefs.current[idx] = el)}
                         data-idx={idx}
                         className={[
-                          "relative z-20 flex items-start gap-3 sm:gap-4 rounded-3xl border border-slate-200 bg-white p-4 shadow-sm",
+                          "relative z-20 flex items-start gap-3 sm:gap-4 rounded-2xl border border-slate-700/50 bg-slate-800/40 p-4 shadow-lg",
                           "transition-all duration-700 ease-out will-change-transform",
-                          "hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md",
+                          "hover:-translate-y-1 hover:border-amber-500/30 hover:shadow-amber-900/10 hover:bg-slate-800/60",
                           show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5",
                         ].join(" ")}
                       >
-                        <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-blue-600 text-sm font-extrabold text-white shadow-sm">
+                        <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-slate-700 to-slate-800 text-sm font-extrabold text-amber-400 shadow-inner border border-white/5">
                           {n}
                         </div>
 
                         <div className="min-w-0">
-                          <p className="text-sm font-extrabold text-slate-900 sm:text-base">
+                          <p className="text-sm font-bold text-slate-100 sm:text-base">
                             {item.title}
                           </p>
-                          <div className="mt-1 flex items-start gap-1 text-sm text-slate-600">
-                            <span className="text-blue-500 font-bold">→</span>
+                          <div className="mt-1 flex items-start gap-1 text-sm text-slate-400">
+                            <span className="text-amber-500 font-bold">→</span>
                             <span>{item.desc}</span>
                           </div>
                         </div>
                       </div>
 
-                      {!isLast && <div className="h-3" />}
+                      {!isLast && <div className="h-6" />}
                     </li>
                   );
                 })}
               </ol>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </div>

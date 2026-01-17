@@ -8,6 +8,10 @@
   /* Slate-50 */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::selection {
   background-color: #d97706;
   /* Amber-600 */

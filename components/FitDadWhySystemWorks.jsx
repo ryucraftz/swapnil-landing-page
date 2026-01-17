@@ -150,7 +150,7 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
                         ref={(el) => (itemRefs.current[idx] = el)}
                         data-idx={idx}
                         className={[
-                          "relative z-20 flex items-start gap-3 sm:gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-md",
+                          "relative z-20 flex items-start gap-3 sm:gap-4 rounded-2xl border border-slate-200 bg-white p-3 sm:p-4 shadow-md",
                           "transition-all duration-700 ease-out will-change-transform",
                           "hover:-translate-y-1 hover:border-amber-500/30 hover:shadow-amber-500/10 hover:bg-slate-50",
                           show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5",
@@ -171,7 +171,7 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
                         </div>
                       </div>
 
-                      {!isLast && <div className="h-6" />}
+                      {!isLast && <div className="h-3 sm:h-6" />}
                     </li>
                   );
                 })}

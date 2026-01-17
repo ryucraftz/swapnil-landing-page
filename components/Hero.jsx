@@ -40,22 +40,20 @@ export default function Hero() {
               <span className="text-xs font-medium text-slate-500">400+ Transformations</span>
             </div>
 
-            <h1 className="font-headings font-extrabold text-5xl sm:text-6xl lg:text-7xl leading-[1.1] text-slate-900 mb-8 tracking-tight">
-              Fix chronic <br className="hidden lg:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-emerald-600 to-teal-500 relative inline-block">
-                joint pain
+            <h1 className="font-headings font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] text-slate-900 mb-6 tracking-tight">
+              Fix chronic <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-emerald-600 to-teal-500 relative inline-block">
+                joint and body pain at the root
                 {/* Creative Underline */}
                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-teal-200/50 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
                 </svg>
-              </span>
-              <br />
-              at the <span className="italic font-serif font-medium text-slate-700">root</span> source.
+              </span> so YOU can move, sit, walk, and sleep comfortably again
+              <br className="hidden lg:block my-2" />
+              without <span className="italic font-serif text-amber-600 font-medium">medication, surgery, or injury risk</span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0 font-sans">
-              Reclaim your movement without <span className="font-semibold text-amber-600 bg-amber-50 px-1 rounded">medication, surgery, or risk</span>.
-              Designed specifically for entrepreneurs and professionals (35–70).
+            <p className="text-lg sm:text-lg text-slate-600 leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0 font-sans">
+              Even if you’re an <span className="font-bold text-slate-900">entrepreneur or working professional (35–70)</span> and struggling with long-term back, knee, neck, shoulder, or joint pain, this is designed specifically for YOU.
             </p>
 
             {/* Note: CTA Button is handled in separate component, usually injected here or users scroll down. 

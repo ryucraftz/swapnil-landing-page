@@ -13,6 +13,9 @@ export default function Hero() {
         transition={{ duration: 0.8, ease: "easeOut", staggerChildren: 0.2 }}
         className="relative z-10 px-4 sm:px-6 text-center max-w-5xl mx-auto"
       >
+        {/* Soft Text Backglow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-100/50 blur-[80px] -z-10 rounded-full mix-blend-multiply" />
+
         {/* Title */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}

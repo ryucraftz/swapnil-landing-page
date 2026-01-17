@@ -20,8 +20,12 @@ html {
 
 body {
   background-color: #ffffff;
-  /* White */
-  background-image: none;
+  /* Ultra-subtle Dot Grid + Soft Radial Top Wash */
+  background-image:
+    radial-gradient(at 50% 0%, rgba(37, 99, 235, 0.03) 0px, transparent 60%),
+    radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 100% 100%, 24px 24px;
+  background-attachment: fixed;
 }
 
 
@@ -54,4 +58,10 @@ body {
   transform: skewX(-20deg);
   animation: cross-line 1.5s linear infinite;
   opacity: 0.8;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
 }

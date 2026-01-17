@@ -17,9 +17,9 @@ export default function CallToActionButton(props) {
         rel="noopener noreferrer"
         className="
           relative inline-flex w-full sm:max-w-md
-          items-center justify-center text-center
+          items-center justify-center text-center overflow-hidden group
           rounded-full bg-blue-600 text-white font-bold tracking-wide
-          shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)]
+          shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_35px_rgba(37,99,235,0.6)] hover:scale-105
           px-8 sm:px-12 py-4 sm:py-5
           text-sm sm:text-base md:text-lg
           whitespace-nowrap
@@ -32,7 +32,10 @@ export default function CallToActionButton(props) {
         whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.96 }}
       >
-        {props.text || "Apply for The Pain Reset 90™"}
+        <span className="relative z-10">{props.text || "Apply for The Pain Reset 90™"}</span>
+
+        {/* Shine Effect */}
+        <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
       </motion.a>
 
     </motion.div>

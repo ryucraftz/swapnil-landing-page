@@ -33,21 +33,21 @@ export default function PhotoTestimonials({ hideHeader = false }) {
 
         {/* Placeholder for Testimonials */}
         <div className="mt-8 sm:mt-12">
-          <FadeIn delay={0.2} className="rounded-3xl border border-slate-200 bg-white p-5 sm:p-8 shadow-2xl">
+          <FadeIn delay={0.2} className="rounded-3xl border border-slate-200 bg-white/60 backdrop-blur-md p-5 sm:p-8 shadow-2xl transition-all duration-500 hover:shadow-blue-900/10 hover:-translate-y-1">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {/* Fake Photo 1 */}
-              <div className="aspect-[4/5] rounded-2xl bg-slate-50 border-2 border-dashed border-slate-200 flex flex-col items-center justify-center p-4">
+              <div className="aspect-[4/5] rounded-2xl bg-white border-2 border-dashed border-slate-200 flex flex-col items-center justify-center p-4 transition-transform hover:scale-[1.02] duration-300">
                 <span className="text-slate-200 font-bold text-4xl mb-2">?</span>
                 <p className="text-slate-400 text-xs text-center font-medium">Transformation #1</p>
               </div>
               {/* Fake Photo 2 */}
-              <div className="aspect-[4/5] rounded-2xl bg-white border-2 border-dashed border-slate-200 flex flex-col items-center justify-center p-4 relative">
-                <span className="absolute -top-3 bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full ring-1 ring-blue-600">AMAZING</span>
+              <div className="aspect-[4/5] rounded-2xl bg-white border-2 border-dashed border-slate-200 flex flex-col items-center justify-center p-4 relative shadow-lg shadow-blue-500/10 transition-transform hover:scale-[1.02] duration-300">
+                <span className="absolute -top-3 bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full ring-1 ring-blue-600 shadow-md">AMAZING</span>
                 <span className="text-slate-200 font-bold text-4xl mb-2">?</span>
                 <p className="text-slate-400 text-xs text-center font-medium">Transformation #2</p>
               </div>
               {/* Fake Photo 3 */}
-              <div className="hidden sm:flex aspect-[4/5] rounded-2xl bg-slate-50 border-2 border-dashed border-slate-200 flex-col items-center justify-center p-4">
+              <div className="hidden sm:flex aspect-[4/5] rounded-2xl bg-white border-2 border-dashed border-slate-200 flex-col items-center justify-center p-4 transition-transform hover:scale-[1.02] duration-300">
                 <span className="text-slate-200 font-bold text-4xl mb-2">?</span>
                 <p className="text-slate-400 text-xs text-center font-medium">Transformation #3</p>
               </div>

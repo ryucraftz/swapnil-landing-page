@@ -40,8 +40,8 @@ function DotIcon() {
       className="relative inline-flex h-6 w-6 items-center justify-center"
       aria-hidden="true"
     >
-      <span className="absolute inset-0 rounded-full bg-amber-500/20 blur-[2px]" />
-      <span className="h-3 w-3 rounded-full bg-amber-500 ring-4 ring-amber-500/20" />
+      <span className="absolute inset-0 rounded-full bg-slate-200 blur-[2px]" />
+      <span className="h-3 w-3 rounded-full bg-slate-900 ring-4 ring-slate-100" />
     </span>
   );
 }
@@ -89,19 +89,14 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
 
   return (
     <section className="relative w-full overflow-hidden bg-transparent">
-      {/* background */}
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-blue-600/10 blur-[100px]" />
-        <div className="absolute top-24 -right-24 h-96 w-96 rounded-full bg-amber-600/10 blur-[100px]" />
-        <div className="absolute bottom-[-160px] left-1/3 h-[520px] w-[520px] rounded-full bg-indigo-600/5 blur-[120px]" />
-      </div>
+      {/* background - Removed blobs */}
 
       <div className="relative mx-auto max-w-6xl px-4 py-12 sm:py-16">
         {/* header */}
         <FadeIn className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
             <span className="block">{data.headingTop}</span>
-            <span className="block text-amber-600">{data.headingBottom}</span>
+            <span className="block text-slate-800">{data.headingBottom}</span>
           </h2>
 
           <p className="mt-4 text-base font-semibold text-slate-700 sm:text-lg">
@@ -116,12 +111,12 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
         <div className="mt-10 grid gap-6 lg:grid-cols-12 lg:items-start">
           {/* left */}
           <div className="lg:col-span-4">
-            <FadeIn delay={0.2} className="rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-xl backdrop-blur-xl lg:sticky lg:top-6">
+            <FadeIn delay={0.2} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl lg:sticky lg:top-6">
               <p className="text-sm font-extrabold text-slate-500 uppercase tracking-wider">
                 {data.listTitle}
               </p>
 
-              <div className="mt-5 rounded-2xl border border-slate-200 bg-gradient-to-b from-slate-50 to-white p-4">
+              <div className="mt-5 rounded-2xl border border-slate-200 bg-slate-50 p-4">
                 <p className="text-sm leading-relaxed text-slate-500 italic">
                   {data.footer}
                 </p>
@@ -131,12 +126,12 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
 
           {/* right: timeline */}
           <div className="lg:col-span-8">
-            <FadeIn delay={0.4} className="rounded-3xl border border-slate-200 bg-white/40 p-6 shadow-lg backdrop-blur-md">
+            <FadeIn delay={0.4} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-lg">
               <ol className="relative">
                 {/* spine */}
                 <div
                   aria-hidden="true"
-                  className="absolute left-[18px] sm:left-[22px] top-0 h-full w-[2px] bg-gradient-to-b from-amber-500/50 via-slate-300 to-transparent"
+                  className="absolute left-[18px] sm:left-[22px] top-0 h-full w-[2px] bg-slate-200"
                 />
 
                 {items.map((item, idx) => {

@@ -48,16 +48,16 @@ function FAQItem({ faq }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? 'border-amber-500 shadow-[0_4px_15px_rgba(245,158,11,0.15)] ring-1 ring-amber-500/20' : 'border-slate-200'}`}>
+    <div className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? 'border-slate-900 shadow-[0_4px_15px_rgba(15,23,42,0.15)] ring-1 ring-slate-900/10' : 'border-slate-200'}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex w-full items-center justify-between bg-white px-4 py-3 sm:px-6 sm:py-4 text-left transition-colors hover:bg-slate-50"
       >
-        <span className={`text-sm sm:text-base font-semibold transition-colors pr-4 ${isOpen ? 'text-amber-600' : 'text-slate-800'}`}>
+        <span className={`text-sm sm:text-base font-semibold transition-colors pr-4 ${isOpen ? 'text-slate-900' : 'text-slate-800'}`}>
           {faq.question}
         </span>
         {isOpen ? (
-          <Minus className="h-4 w-4 sm:h-5 sm:w-5 text-amber-600 flex-shrink-0" />
+          <Minus className="h-4 w-4 sm:h-5 sm:w-5 text-slate-900 flex-shrink-0" />
         ) : (
           <Plus className="h-4 w-4 sm:h-5 sm:w-5 text-slate-400 flex-shrink-0" />
         )}

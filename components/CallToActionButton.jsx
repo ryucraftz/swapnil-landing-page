@@ -18,22 +18,21 @@ export default function CallToActionButton(props) {
         className="
           relative inline-flex w-full sm:max-w-md
           items-center justify-center text-center
-          rounded-full bg-gradient-to-r from-red-600 to-rose-600 text-white font-bold tracking-wide
-          shadow-[0_0_20px_rgba(220,38,38,0.5)] hover:shadow-[0_0_30px_rgba(220,38,38,0.7)]
+          rounded-full bg-slate-900 text-white font-bold tracking-wide
+          shadow-[0_0_20px_rgba(15,23,42,0.3)] hover:shadow-[0_0_30px_rgba(15,23,42,0.5)]
           px-8 sm:px-12 py-4 sm:py-5
           text-sm sm:text-base md:text-lg
           whitespace-nowrap
           transition-all duration-300 ease-out
           max-[380px]:text-[13px] max-[380px]:px-5
           cursor-pointer
-          border border-red-500/30 hover:border-red-400/80
+          border border-transparent hover:bg-black
           no-underline
         "
         whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.96 }}
       >
-        {props.text || "Apply for IRON DAD CLUB™"}
-        <span className="animate-cross-line"></span>
+        {props.text || "Apply for The Pain Reset 90™"}
       </motion.a>
 
     </motion.div>

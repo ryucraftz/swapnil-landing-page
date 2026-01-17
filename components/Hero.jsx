@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
     <div className="relative min-h-0 md:min-h-[60vh] flex items-center justify-center overflow-hidden py-12 md:py-20">
@@ -8,19 +10,34 @@ export default function Hero() {
       <div className="absolute -bottom-8 left-1/3 w-72 h-72 bg-amber-400 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob animation-delay-4000"></div>
 
       {/* 📱 Push down on mobile */}
-      <div className="relative z-10 px-4 sm:px-6 text-center max-w-5xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", staggerChildren: 0.2 }}
+        className="relative z-10 px-4 sm:px-6 text-center max-w-5xl mx-auto"
+      >
         {/* Title */}
-        <h1 className="font-extrabold leading-tight tracking-tight mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-6 drop-shadow-sm px-2 sm:px-0">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="font-extrabold leading-tight tracking-tight mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-6 drop-shadow-sm px-2 sm:px-0"
+        >
           Lose post-30 belly fat and <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600">feel fit, strong, and energetic again</span> as a father
-        </h1>
+        </motion.h1>
 
         {/* Subheading */}
-        <h2 className="my-6 text-lg sm:text-xl md:text-2xl font-medium text-slate-600 leading-relaxed max-w-3xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="my-6 text-lg sm:text-xl md:text-2xl font-medium text-slate-600 leading-relaxed max-w-3xl mx-auto"
+        >
           Built for <span className="font-bold text-slate-900">working fathers</span> who want real fat loss and strength{" "}
           <span className="hidden sm:inline"> </span>
           without crash dieting, long workouts, or giving up family meals.
-        </h2>
-      </div>
+        </motion.h2>
+      </motion.div>
     </div>
   );
 }

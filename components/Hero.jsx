@@ -20,9 +20,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-extrabold leading-tight tracking-tight mx-auto text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-6 drop-shadow-sm px-2 sm:px-0"
         >
-          Fix chronic <span className="text-slate-900 underline decoration-slate-400 decoration-4 underline-offset-4">joint and body pain at the root</span> so YOU can move, sit, walk, and sleep comfortably again
+          Fix chronic <span className="text-blue-700 underline decoration-blue-400 decoration-4 underline-offset-4">joint and body pain at the root</span> so YOU can move, sit, walk, and sleep comfortably again
           <br className="hidden md:block" />
-          without <span className="text-slate-800 italic">medication, surgery, or injury risk</span>
+          without <span className="text-blue-600 font-bold italic">medication, surgery, or injury risk</span>
         </motion.h1>
 
         {/* Subheading */}

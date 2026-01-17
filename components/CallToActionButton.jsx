@@ -18,15 +18,15 @@ export default function CallToActionButton(props) {
         className="
           relative inline-flex w-full sm:max-w-md
           items-center justify-center text-center
-          rounded-full bg-slate-900 text-white font-bold tracking-wide
-          shadow-[0_0_20px_rgba(15,23,42,0.3)] hover:shadow-[0_0_30px_rgba(15,23,42,0.5)]
+          rounded-full bg-blue-600 text-white font-bold tracking-wide
+          shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:shadow-[0_0_30px_rgba(37,99,235,0.6)]
           px-8 sm:px-12 py-4 sm:py-5
           text-sm sm:text-base md:text-lg
           whitespace-nowrap
           transition-all duration-300 ease-out
           max-[380px]:text-[13px] max-[380px]:px-5
           cursor-pointer
-          border border-transparent hover:bg-black
+          border border-transparent hover:bg-blue-700
           no-underline
         "
         whileHover={{ scale: 1.04 }}

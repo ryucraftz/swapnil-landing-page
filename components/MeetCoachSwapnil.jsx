@@ -11,7 +11,7 @@ export default function MeetCoachSwapnil() {
         {/* Header */}
         <FadeIn className="text-center max-w-3xl mx-auto">
           <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-slate-900 mb-4">
-            Meet Your Coach <span className="text-slate-900 underline decoration-slate-300 underline-offset-4">Swapnil</span>
+            Meet Your Coach <span className="text-slate-900 underline decoration-blue-500 underline-offset-4">Swapnil</span>
           </h2>
 
           <p className="mt-4 text-base sm:text-lg text-slate-600">
@@ -35,13 +35,13 @@ export default function MeetCoachSwapnil() {
                 {/* Top tags */}
                 <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
                   <div className="inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur px-3 py-1.5 border border-slate-200 shadow-sm">
-                    <BadgeCheck className="h-4 w-4 text-slate-900" />
+                    <BadgeCheck className="h-4 w-4 text-blue-600" />
                     <span className="text-xs sm:text-sm font-semibold text-slate-800">
                       Certified Coach
                     </span>
                   </div>
 
-                  <div className="hidden sm:inline-flex items-center gap-2 rounded-full bg-slate-900 px-3 py-1.5 border border-slate-800 shadow-sm">
+                  <div className="hidden sm:inline-flex items-center gap-2 rounded-full bg-blue-600 px-3 py-1.5 border border-blue-700 shadow-sm">
                     <Sparkles className="h-4 w-4 text-white" />
                     <span className="text-xs sm:text-sm font-bold text-white">
                       The Pain Reset 90™

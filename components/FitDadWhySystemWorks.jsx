@@ -40,8 +40,8 @@ function DotIcon() {
       className="relative inline-flex h-6 w-6 items-center justify-center"
       aria-hidden="true"
     >
-      <span className="absolute inset-0 rounded-full bg-slate-200 blur-[2px]" />
-      <span className="h-3 w-3 rounded-full bg-slate-900 ring-4 ring-slate-100" />
+      <span className="absolute inset-0 rounded-full bg-blue-100 blur-[2px]" />
+      <span className="h-3 w-3 rounded-full bg-blue-600 ring-4 ring-blue-50" />
     </span>
   );
 }
@@ -131,7 +131,7 @@ export default function FitDadTimelineBlueprint({ data = DEFAULT_DATA }) {
                 {/* spine */}
                 <div
                   aria-hidden="true"
-                  className="absolute left-[18px] sm:left-[22px] top-0 h-full w-[2px] bg-slate-200"
+                  className="absolute left-[18px] sm:left-[22px] top-0 h-full w-[2px] bg-blue-100"
                 />
 
                 {items.map((item, idx) => {

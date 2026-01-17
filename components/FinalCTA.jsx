@@ -12,7 +12,7 @@ export default function FinalCTA() {
                     <h2 className="text-slate-900 text-2xl sm:text-4xl md:text-5xl font-extrabold mb-8 leading-tight">
                         You don’t need another temporary fix.{" "}
                         <br className="hidden sm:block" />
-                        <span className="text-slate-900 underline decoration-slate-300 underline-offset-4">You need a system that corrects what’s causing the pain.</span>
+                        <span className="text-slate-900 underline decoration-blue-500 underline-offset-4">You need a system that corrects what’s causing the pain.</span>
                     </h2>
                     <p className="text-slate-600 text-lg sm:text-xl mb-10 leading-relaxed">
                         If you’re ready to move comfortably again,{" "}

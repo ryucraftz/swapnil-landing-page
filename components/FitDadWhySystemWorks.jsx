@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import FadeIn from "./FadeIn";
+import RevealWords from "./RevealWords";
 
 const DEFAULT_DATA = {
   headingTop: "WHAT YOU WILL GET",
@@ -88,14 +89,12 @@ export default function FitDadTreeTimeline({ data = DEFAULT_DATA }) {
       <div className="relative mx-auto max-w-6xl px-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-24">
-          <FadeIn>
-            <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 font-headings">
-              {data.listTitle}
-            </h2>
-            <p className="text-lg sm:text-xl font-medium text-slate-600">
-              {data.sub1}
-            </p>
-          </FadeIn>
+          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 font-headings">
+            <RevealWords text={data.listTitle} delay={0.2} />
+          </h2>
+          <div className="text-lg sm:text-xl font-medium text-slate-600">
+            <RevealWords text={data.sub1} delay={0.4} />
+          </div>
         </div>
 
         {/* TREE CONTAINER */}

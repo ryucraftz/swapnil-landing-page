@@ -97,14 +97,14 @@ export default function ThankYou() {
                         {/* Main Image */}
                         <img
                             src={COACH_IMAGE_SRC}
-                            alt="Coach Deepesh"
+                            alt="Coach Swapnil"
                             className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700"
                         />
 
                         {/* Bottom Overlay */}
                         <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent p-8 pt-24 text-center">
                             <div className="inline-block bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full mb-2">
-                                <span className="text-white text-xs font-bold tracking-wide">- With Coach Deepesh</span>
+                                <span className="text-white text-xs font-bold tracking-wide">- With Coach Swapnil</span>
                             </div>
                             <p className="text-slate-200 text-sm font-medium">Founder of FitDad Fitness</p>
                         </div>

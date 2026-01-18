@@ -39,7 +39,6 @@ body {
     /* Amber-100 (Warmth) */
     radial-gradient(at 0% 100%, rgba(204, 251, 241, 0.3) 0px, transparent 50%);
   /* Teal-50 (Mint) */
-  background-attachment: fixed;
   background-size: 100% 100%;
 }
 
@@ -63,6 +62,7 @@ body {
 
 .animate-blob {
   animation: blob 7s infinite;
+  will-change: transform;
 }
 
 .animation-delay-2000 {

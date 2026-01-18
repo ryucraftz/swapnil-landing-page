@@ -25,10 +25,10 @@ export default function MeetCoachSwapnil() {
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           {/* LEFT: Photo card */}
           <div className="lg:col-span-5">
-            <FadeIn delay={0.2} className="relative h-full rounded-3xl border border-indigo-100 bg-white/80 backdrop-blur-2xl p-3 sm:p-4 shadow-2xl shadow-blue-900/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-blue-900/20 hover:border-blue-300 group">
-              <div className="relative overflow-hidden rounded-2xl border border-slate-100 bg-slate-50 h-[300px] sm:h-[400px] flex items-center justify-center transition-colors group-hover:bg-blue-50/30">
+            <FadeIn delay={0.2} className="relative h-full rounded-3xl border border-teal-100 bg-white/80 backdrop-blur-2xl p-3 sm:p-4 shadow-2xl shadow-teal-900/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-teal-900/20 hover:border-teal-300 group">
+              <div className="relative overflow-hidden rounded-2xl border border-slate-100 bg-slate-50 h-[300px] sm:h-[400px] flex items-center justify-center transition-colors group-hover:bg-teal-50/30">
                 {/* Grid Pattern */}
-                <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:24px_24px]" />
+                <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#0d9488_1px,transparent_1px),linear-gradient(to_bottom,#0d9488_1px,transparent_1px)] bg-[size:24px_24px]" />
 
                 <p className="text-slate-400 font-medium relative z-10">Coach Photo Placeholder</p>
 
@@ -85,9 +85,9 @@ export default function MeetCoachSwapnil() {
 
           {/* RIGHT: Story + Expertise */}
           <div className="lg:col-span-7">
-            <FadeIn delay={0.4} className="h-full rounded-3xl border border-indigo-100 bg-white/80 backdrop-blur-2xl p-6 sm:p-8 shadow-2xl shadow-blue-900/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-blue-900/20 hover:border-blue-300 group">
-              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5 transition-colors group-hover:bg-blue-50/30 group-hover:border-blue-100">
-                <p className="text-sm font-bold tracking-[0.18em] uppercase text-slate-500 group-hover:text-blue-600 transition-colors">
+            <FadeIn delay={0.4} className="h-full rounded-3xl border border-teal-100 bg-white/80 backdrop-blur-2xl p-6 sm:p-8 shadow-2xl shadow-teal-900/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-teal-900/20 hover:border-teal-300 group">
+              <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4 sm:p-5 transition-colors group-hover:bg-teal-50/30 group-hover:border-teal-100">
+                <p className="text-sm font-bold tracking-[0.18em] uppercase text-slate-500 group-hover:text-teal-600 transition-colors">
                   The story
                 </p>
 
@@ -151,7 +151,7 @@ function MiniStatOverlay({ icon, label }) {
 function Bullet({ children }) {
   return (
     <li className="flex items-start gap-2 rounded-2xl border border-slate-200 bg-white/50 px-3 py-3 hover:border-slate-300 transition-colors">
-      <span className="mt-1.5 h-2 w-2 rounded-full bg-cyan-400 shrink-0 shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
+      <span className="mt-1.5 h-2 w-2 rounded-full bg-teal-400 shrink-0 shadow-[0_0_8px_rgba(45,212,191,0.6)]" />
       <span className="text-sm sm:text-base text-slate-700 leading-snug">
         {children}
       </span>

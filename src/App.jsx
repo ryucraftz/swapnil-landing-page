@@ -7,7 +7,7 @@ import VideoSection from "../components/VideoSection";
 import CallToActionButton from "../components/CallToActionButton";
 import MeetCoachSwapnil from "../components/MeetCoachSwapnil";
 import PhotoTestimonials from "../components/PhotoTestimonials";
-import FitDadWhySystemWorks from "../components/FitDadWhySystemWorks";
+import WhySystemWorks from "../components/WhySystemWorks";
 import FAQ from "../components/FAQ";
 import FinalCTA from "../components/FinalCTA";
 import StickyBar from "../components/StickyBar";
@@ -55,7 +55,7 @@ function App() {
         </div>
 
         {/* What You Will Get */}
-        <FitDadWhySystemWorks />
+        <WhySystemWorks />
 
         {/* CTA 3 (Existing) */}
         <div className="flex justify-center py-8">

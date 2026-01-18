@@ -35,7 +35,7 @@ export default function ThankYou() {
                     {/* Header Tag */}
                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 border border-amber-200 rounded-full text-xs font-bold text-amber-700 mb-6 uppercase tracking-wider">
                         <Star className="w-3 h-3 fill-amber-700" />
-                        FitDad Fitness
+                        The Pain Reset 90™
                     </div>
 
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
@@ -44,7 +44,7 @@ export default function ThankYou() {
                     </h1>
 
                     <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                        Welcome to FitDad Fitness Online! 🎉 We're thrilled to have you on board.
+                        Welcome to The Pain Reset 90™! 🎉 We're thrilled to have you on board.
                         You've just taken an incredible step towards a healthier, happier you.
                     </p>
 
@@ -106,7 +106,7 @@ export default function ThankYou() {
                             <div className="inline-block bg-white/10 backdrop-blur-md border border-white/20 px-4 py-1.5 rounded-full mb-2">
                                 <span className="text-white text-xs font-bold tracking-wide">- With Coach Swapnil</span>
                             </div>
-                            <p className="text-slate-200 text-sm font-medium">Founder of FitDad Fitness</p>
+                            <p className="text-slate-200 text-sm font-medium">Founder of The Pain Reset 90™</p>
                         </div>
                     </div>
                 </motion.div>

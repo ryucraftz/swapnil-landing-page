@@ -78,7 +78,7 @@ const Trunk = ({ items }) => {
   );
 };
 
-export default function FitDadTreeTimeline({ data = DEFAULT_DATA }) {
+export default function WhySystemWorks({ data = DEFAULT_DATA }) {
   return (
     <section className="relative w-full py-16 sm:py-24 overflow-hidden">
       {/* Background Ambience */}

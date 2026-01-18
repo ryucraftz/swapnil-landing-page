@@ -44,7 +44,7 @@ const StickyBar = () => {
               href={CALENDLY_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white font-bold text-xs sm:text-base md:text-lg rounded-full shadow-lg shadow-teal-200/50 hover:shadow-teal-500/30 transition-all duration-300 transform hover:-translate-y-0.5 px-4 py-2.5 sm:px-8 sm:py-3 whitespace-normal text-center leading-tight max-w-[160px] sm:max-w-[300px] cursor-pointer block border border-teal-500/20 hover:border-teal-400/50 no-underline"
+              className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white font-bold text-xs sm:text-base md:text-lg rounded-full shadow-lg shadow-orange-200/50 hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 px-4 py-2.5 sm:px-8 sm:py-3 whitespace-normal text-center leading-tight max-w-[160px] sm:max-w-[300px] cursor-pointer block border border-orange-500/20 hover:border-orange-400/50 no-underline"
             >
               Book Your 1:1 FitDad Transformation Call
             </a>

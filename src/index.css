@@ -35,8 +35,8 @@ body {
     /* Teal-50 (Mint) */
     radial-gradient(at 100% 0%, rgba(241, 245, 249, 0.6) 0px, transparent 50%),
     /* Slate-100 (Platinum) */
-    radial-gradient(at 100% 100%, rgba(224, 242, 254, 0.4) 0px, transparent 50%),
-    /* Sky-100 (Cool Air) */
+    radial-gradient(at 100% 100%, rgba(254, 243, 199, 0.3) 0px, transparent 50%),
+    /* Amber-100 (Warmth) */
     radial-gradient(at 0% 100%, rgba(204, 251, 241, 0.3) 0px, transparent 50%);
   /* Teal-50 (Mint) */
   background-attachment: fixed;

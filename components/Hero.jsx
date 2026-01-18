@@ -7,7 +7,7 @@ export default function Hero() {
       {/* 🌟 Premium Aurora Background - Enriched Teal */}
       <div className="absolute top-0 left-1/4 w-80 h-80 bg-teal-500/30 rounded-full mix-blend-multiply filter blur-[100px] animate-blob"></div>
       <div className="absolute top-0 right-1/4 w-80 h-80 bg-emerald-500/30 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-8 left-1/3 w-80 h-80 bg-teal-300/30 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-4000"></div>
+      <div className="absolute -bottom-8 left-1/3 w-80 h-80 bg-amber-400/20 rounded-full mix-blend-multiply filter blur-[100px] animate-blob animation-delay-4000"></div>
 
       {/* 📱 Push down on mobile */}
       <motion.div

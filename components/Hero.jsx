@@ -28,9 +28,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="font-extrabold leading-snug tracking-tight mx-auto text-3xl sm:text-5xl md:text-6xl lg:text-[4rem] text-slate-800 mb-6 drop-shadow-sm px-2 sm:px-0"
         >
-          Fix chronic <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-cyan-500 to-teal-600 font-black animate-text-shimmer inline-block bg-[length:200%_auto]">Back Pain</span> so <span className="italic relative inline-block text-slate-900">YOU</span> can move, sit, walk, and sleep comfortably again
+          Fix chronic <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-700 via-cyan-600 to-teal-700 font-black animate-text-shimmer inline-block bg-[length:200%_auto]">Back Pain</span> so <span className="italic relative inline-block text-slate-900">YOU</span> can move, sit, walk, and sleep comfortably again
           <br className="hidden md:block" />
-          {" "}without <span className="relative z-10 whitespace-normal sm:whitespace-nowrap inline-block"><span className="absolute inset-x-0 bottom-1 h-3 bg-amber-200/40 -z-10 skew-x-[-10deg] hidden sm:block"></span><span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600 italic font-bold">medication, surgery, or injury risk</span></span>
+          {" "}without <span className="relative z-10 whitespace-normal sm:whitespace-nowrap inline sm:inline-block"><span className="absolute inset-x-0 bottom-1 h-3 bg-amber-200/40 -z-10 skew-x-[-10deg] hidden sm:block"></span><span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 italic font-bold box-decoration-clone">medication, surgery, or injury risk</span></span>
         </motion.h1>
 
         {/* Subheading */}

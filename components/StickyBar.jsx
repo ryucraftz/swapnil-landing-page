@@ -44,7 +44,7 @@ const StickyBar = () => {
               href={CALENDLY_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white font-bold text-xs sm:text-base md:text-lg rounded-full shadow-lg shadow-orange-200/50 hover:shadow-orange-500/30 transition-all duration-300 transform hover:-translate-y-0.5 px-4 py-2.5 sm:px-8 sm:py-3 whitespace-normal text-center leading-tight max-w-[160px] sm:max-w-[300px] cursor-pointer block border border-orange-500/20 hover:border-orange-400/50 no-underline"
+              className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs sm:text-base md:text-lg rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 px-5 py-3 sm:px-8 sm:py-3.5 whitespace-normal text-center leading-tight max-w-[160px] sm:max-w-[300px] cursor-pointer block border border-white/20 ring-4 ring-orange-50/50 no-underline"
             >
               Book Your 1:1 Pain Reset Call
             </a>

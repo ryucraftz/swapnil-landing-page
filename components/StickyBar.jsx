@@ -25,21 +25,12 @@ const StickyBar = () => {
           animate={{ y: 0 }}
           exit={{ y: "100%" }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-xl p-4 shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.1)] flex items-center justify-between border-t border-slate-200 lg:px-20 z-[1000] space-x-2 sm:space-x-6 active:bg-slate-50 transition-colors"
+          className="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-xl p-4 shadow-[0_-4px_20px_-5px_rgba(0,0,0,0.1)] flex items-center justify-center border-t border-slate-200 lg:px-20 z-[1000] space-x-2 sm:space-x-6 active:bg-slate-50 transition-colors"
         >
-          <div className="flex flex-col items-start min-w-0 shrink-0">
-            <div className="flex items-baseline gap-1.5 sm:gap-2">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500 text-xl sm:text-3xl font-black drop-shadow-sm">
-                FREE
-              </span>
-            </div>
-            <div className="text-[10px] sm:text-sm font-bold text-blue-800 uppercase tracking-wide truncate max-w-[120px] sm:max-w-none">
-              Limited-time offer
-            </div>
-          </div>
+
 
           {/* Right: CTA */}
-          <div className="flex items-center justify-end relative ml-2 sm:ml-0">
+          <div className="flex items-center justify-center relative ml-2 sm:ml-0">
             <a
               href={CALENDLY_LINK}
               target="_blank"

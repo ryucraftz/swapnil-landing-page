@@ -30,7 +30,7 @@ export default function ThankYou() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="flex-1 w-full max-w-xl z-10"
+                    className="flex-1 w-full max-w-xl z-10 flex flex-col items-center text-center"
                 >
                     {/* Header Tag */}
                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 border border-amber-200 rounded-full text-xs font-bold text-amber-700 mb-6 uppercase tracking-wider">
@@ -49,7 +49,7 @@ export default function ThankYou() {
                     </p>
 
                     {/* NOTE CARD */}
-                    <div className="bg-white/80 backdrop-blur-xl border border-slate-200/60 rounded-2xl p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] mb-8 relative overflow-hidden group hover:border-amber-200/50 transition-colors">
+                    <div className="bg-white/80 backdrop-blur-xl border border-slate-200/60 rounded-2xl p-6 sm:p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] mb-8 relative overflow-hidden group hover:border-amber-200/50 transition-colors text-left w-full">
                         <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-amber-400 to-orange-500" />
 
                         <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">

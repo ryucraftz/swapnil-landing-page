@@ -38,7 +38,7 @@ const Review = () => {
           <span className="mx-1 sm:mx-2 text-slate-300">|</span>
 
           <span className="font-medium">
-            <span className="font-bold text-slate-900"><AnimatedNumber value={400} /></span> Transformations
+            Trusted by <span className="font-bold text-slate-900"><AnimatedNumber value={400} /></span> Executives
           </span>
         </div>
       </div>

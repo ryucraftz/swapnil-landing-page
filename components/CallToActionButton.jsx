@@ -32,10 +32,13 @@ export default function CallToActionButton(props) {
         whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.96 }}
       >
-        <span className="relative z-10">{props.text || "Apply for The Pain Reset 90™"}</span>
+        <span className="relative z-10 flex items-center gap-2">
+          {props.text || "Apply for The Pain Reset 90™"}
+          {/* Optional Arrow if desired, but text is fine */}
+        </span>
 
         {/* Shine Effect */}
-        <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent z-0" />
+        <div className="absolute inset-0 -translate-x-full animate-shimmer-slide bg-gradient-to-r from-transparent via-white/30 to-transparent z-0 pointer-events-none" />
       </motion.a>
 
     </motion.div>

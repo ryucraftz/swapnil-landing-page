@@ -13,6 +13,7 @@ import FinalCTA from "../components/FinalCTA";
 import StickyBar from "../components/StickyBar";
 import ThankYou from "../components/ThankYou";
 import ThankYouStickyBar from "../components/ThankYouStickyBar";
+import Footer from "../components/Footer";
 
 function App() {
   const [isThankYou, setIsThankYou] = useState(false);
@@ -46,7 +47,6 @@ function App() {
         </div>
 
         {/* Social Proof */}
-        {/* Explicitly confusing prop naming fixed by just not passing it for default behavior */}
         <PhotoTestimonials />
 
         {/* CTA 2 */}
@@ -75,6 +75,9 @@ function App() {
 
         {/* Final CTA */}
         <FinalCTA />
+
+        {/* Footer */}
+        <Footer />
       </div>
 
       <StickyBar />

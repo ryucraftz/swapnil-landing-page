@@ -44,9 +44,11 @@ const StickyBar = () => {
               href={CALENDLY_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs sm:text-base md:text-lg rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 px-4 py-3 sm:px-8 sm:py-3.5 whitespace-nowrap text-center leading-tight cursor-pointer block border border-white/20 ring-4 ring-orange-50/50 no-underline"
+              className="relative overflow-hidden bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white font-bold text-xs sm:text-base md:text-lg rounded-full shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 px-4 py-3 sm:px-8 sm:py-3.5 whitespace-nowrap text-center leading-tight cursor-pointer block border border-white/20 ring-4 ring-orange-50/50 no-underline group"
             >
-              Book Your 1:1 Pain Reset Call
+              {/* Shimmer */}
+              <div className="absolute inset-0 -translate-x-full animate-shimmer-slide bg-gradient-to-r from-transparent via-white/30 to-transparent z-10 pointer-events-none" />
+              <span className="relative z-20">Book Your 1:1 Pain Reset Call</span>
             </a>
           </div>
         </motion.div>

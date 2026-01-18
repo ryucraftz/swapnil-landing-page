@@ -49,7 +49,7 @@ export default function FloatingNav() {
                                 className="group relative flex items-center justify-center p-3 rounded-full hover:bg-white/50 transition-colors"
                                 aria-label={item.name}
                             >
-                                <div className="relative z-10 text-slate-600 group-hover:text-teal-600 transition-colors duration-300">
+                                <div className="relative z-10 text-slate-600 group-hover:text-blue-600 transition-colors duration-300">
                                     {item.icon}
                                 </div>
 
@@ -64,7 +64,7 @@ export default function FloatingNav() {
 
                         {/* CTA Button */}
                         <div className="pl-2 border-l border-slate-200 ml-1">
-                            <button className="bg-teal-600 hover:bg-teal-500 text-white rounded-full px-4 py-2 text-sm font-bold shadow-md hover:shadow-lg transition-all">
+                            <button className="bg-blue-600 hover:bg-blue-500 text-white rounded-full px-4 py-2 text-sm font-bold shadow-md hover:shadow-lg transition-all">
                                 Book Call
                             </button>
                         </div>

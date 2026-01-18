@@ -33,7 +33,7 @@ const StickyBar = () => {
                 FREE
               </span>
             </div>
-            <div className="text-[10px] sm:text-sm font-bold text-teal-700 uppercase tracking-wide truncate max-w-[120px] sm:max-w-none">
+            <div className="text-[10px] sm:text-sm font-bold text-blue-800 uppercase tracking-wide truncate max-w-[120px] sm:max-w-none">
               Limited-time offer
             </div>
           </div>

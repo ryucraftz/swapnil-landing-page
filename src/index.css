@@ -2,10 +2,10 @@
 
 :root {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: #020617;
-  /* Slate-950 */
-  color: #f8fafc;
-  /* Slate-50 */
+  background-color: #fcfcfc;
+  /* Platinum */
+  color: #0f172a;
+  /* Slate-900 */
 }
 
 h1,
@@ -24,22 +24,21 @@ html {
 ::selection {
   background-color: #fbbf24;
   /* Amber-400 */
-  color: #020617;
-  /* Slate-950 */
+  color: #0f172a;
 }
 
 body {
-  background-color: #020617;
-  /* Slate-950 (Navy Base) */
+  background-color: #f8fafc;
+  /* Slate-50 */
   background-image:
-    radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.15) 0px, transparent 50%),
-    /* Blue-900 */
-    radial-gradient(at 100% 0%, rgba(15, 23, 42, 0.5) 0px, transparent 50%),
-    /* Slate-900 */
-    radial-gradient(at 100% 100%, rgba(120, 53, 15, 0.1) 0px, transparent 50%),
-    /* Amber-900 */
-    radial-gradient(at 0% 100%, rgba(30, 58, 138, 0.1) 0px, transparent 50%);
-  /* Blue-900 */
+    radial-gradient(at 0% 0%, rgba(219, 234, 254, 0.4) 0px, transparent 50%),
+    /* Blue-100 */
+    radial-gradient(at 100% 0%, rgba(241, 245, 249, 0.6) 0px, transparent 50%),
+    /* Slate-100 */
+    radial-gradient(at 100% 100%, rgba(254, 243, 199, 0.3) 0px, transparent 50%),
+    /* Amber-100 */
+    radial-gradient(at 0% 100%, rgba(219, 234, 254, 0.3) 0px, transparent 50%);
+  /* Blue-100 */
   background-size: 100% 100%;
 }
 

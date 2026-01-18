@@ -7,16 +7,16 @@ export default function Footer() {
     return (
         <footer className="bg-slate-900 border-t border-slate-800 text-slate-400 py-12 sm:py-16">
             <div className="max-w-6xl mx-auto px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 text-center md:text-left">
                     {/* Brand */}
                     <div className="col-span-1 md:col-span-2">
                         <h3 className="text-white text-xl font-bold font-headings mb-4">
                             The Pain Reset 90™
                         </h3>
-                        <p className="text-sm leading-relaxed max-w-xs mb-6">
+                        <p className="text-sm leading-relaxed max-w-xs mb-6 mx-auto md:mx-0">
                             A comprehensive system for busy professionals to eliminate chronic pain without surgery, pills, or endless rehab.
                         </p>
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 justify-center md:justify-start">
                             <SocialLink href="#" icon={<Instagram className="w-5 h-5" />} label="Instagram" />
                             <SocialLink href="#" icon={<Linkedin className="w-5 h-5" />} label="LinkedIn" />
                             <SocialLink href="#" icon={<Twitter className="w-5 h-5" />} label="Twitter" />

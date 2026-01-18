@@ -68,8 +68,8 @@ const Trunk = ({ items }) => {
 
         <defs>
           <linearGradient id="trunk-gradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#14b8a6" />
-            <stop offset="50%" stopColor="#10b981" />
+            <stop offset="0%" stopColor="#2563eb" />
+            <stop offset="50%" stopColor="#4f46e5" />
             <stop offset="100%" stopColor="#f59e0b" />
           </linearGradient>
         </defs>
@@ -83,7 +83,7 @@ export default function WhySystemWorks({ data = DEFAULT_DATA }) {
     <section className="relative w-full py-16 sm:py-24 overflow-hidden">
       {/* Background Ambience */}
       <div className="absolute top-0 left-0 w-full h-full bg-slate-50/50 -z-20" />
-      <div className="absolute top-[10%] left-[50%] -translate-x-1/2 w-[800px] h-[800px] bg-teal-100/30 blur-[120px] -z-10 rounded-full" />
+      <div className="absolute top-[10%] left-[50%] -translate-x-1/2 w-[800px] h-[800px] bg-blue-100/30 blur-[120px] -z-10 rounded-full" />
 
       <div className="relative mx-auto max-w-6xl px-4">
         {/* Header */}
@@ -114,12 +114,12 @@ export default function WhySystemWorks({ data = DEFAULT_DATA }) {
                 >
                   {/* CENTRAL NODE (Desktop) */}
                   <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center justify-center w-8 h-8 z-20">
-                    <div className="w-4 h-4 rounded-full bg-teal-400 ring-4 ring-white shadow-lg group-hover:scale-125 group-hover:bg-amber-300 transition-all duration-500" />
+                    <div className="w-4 h-4 rounded-full bg-blue-500 ring-4 ring-white shadow-lg group-hover:scale-125 group-hover:bg-amber-400 transition-all duration-500" />
                   </div>
 
                   {/* MOBILE NODE (Left side) */}
                   <div className="md:hidden absolute left-4 flex items-center justify-center w-8 h-8 z-20 -translate-x-1/2">
-                    <div className="w-4 h-4 rounded-full bg-teal-400 ring-4 ring-white shadow-lg" />
+                    <div className="w-4 h-4 rounded-full bg-blue-500 ring-4 ring-white shadow-lg" />
                   </div>
 
                   {/* LEFT SIDE CONTENT (Desktop Only - Even Items) */}
@@ -134,15 +134,15 @@ export default function WhySystemWorks({ data = DEFAULT_DATA }) {
                       <FadeIn delay={idx * 0.1}>
                         <div
                           className={`
-                                relative bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-teal-50/50 
-                                transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-900/10
-                                group-hover:border-teal-200
+                                relative bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-blue-50/50 
+                                transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/10
+                                group-hover:border-blue-200
                             `}
                         >
                           {/* Connector Line (Right side of card) */}
-                          <div className="absolute top-1/2 -right-12 h-[2px] w-12 bg-teal-100 -z-10" />
+                          <div className="absolute top-1/2 -right-12 h-[2px] w-12 bg-blue-100 -z-10" />
 
-                          <span className="text-5xl font-serif font-black text-teal-100/80 mb-2 block group-hover:text-amber-100 transition-colors">
+                          <span className="text-5xl font-serif font-black text-blue-100/80 mb-2 block group-hover:text-amber-100 transition-colors">
                             {n}
                           </span>
                           <h3 className="text-xl font-bold text-slate-900 mb-2 font-display">
@@ -166,15 +166,15 @@ export default function WhySystemWorks({ data = DEFAULT_DATA }) {
                     <FadeIn delay={idx * 0.1}>
                       <div
                         className={`
-                            relative bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-teal-50/50 
-                            transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-teal-900/10
-                            group-hover:border-teal-200
+                            relative bg-white p-6 md:p-8 rounded-3xl shadow-lg border border-blue-50/50 
+                            transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/10
+                            group-hover:border-blue-200
                         `}
                       >
                         {/* Connector Line (Left side of card - Desktop Only) */}
-                        <div className="hidden md:block absolute top-1/2 -left-12 h-[2px] w-12 bg-teal-100 -z-10" />
+                        <div className="hidden md:block absolute top-1/2 -left-12 h-[2px] w-12 bg-blue-100 -z-10" />
 
-                        <span className="text-5xl font-serif font-black text-teal-100/80 mb-2 block group-hover:text-amber-100 transition-colors">
+                        <span className="text-5xl font-serif font-black text-blue-100/80 mb-2 block group-hover:text-amber-100 transition-colors">
                           {n}
                         </span>
                         <h3 className="text-xl font-bold text-slate-900 mb-2 font-display">
